@@ -1,0 +1,28 @@
+.header {
+    min-width: 360px;
+    width: 100%;
+    height: 100px;
+    display: flex;
+    justify-content: space-between;
+    align-items: center;
+    background-color: var(--verde-escuro-90);
+}
+
+.header__menu{
+    min-width: 44px;
+    min-height: 44px;
+    display: flex;
+    justify-content: center;
+    align-items: center;
+    background-color: transparent;
+    border: none;
+    margin: 0 1rem;
+}
+
+.header__menu img {
+    width: 100%;
+}
+
+.header__logo img{
+    width: 200px;
+}
