@@ -1,0 +1,28 @@
+<nav class="menu__list" *ngIf="mobile">
+    <ul>
+        <li>
+            <img src="../../../assets/img/bird_phosphor_icon.svg" alt=""> 
+            <a href="">Guia de bolso</a>
+        </li>
+        <li>
+            <img src="../../../assets/img/forum_phosphor_icon.svg" alt="">
+            <a href="">Forum</a>
+        </li>
+        <li>
+            <img src="../../../assets/img/bird_phosphor_icon.svg" alt="">
+            <a href="">Home</a>
+        </li>
+    </ul>
+</nav>
+
+
+<nav class="menu__list--desktop" *ngIf="!mobile">
+    <ul>
+        <li><a href="">Guia de bolso</a></li>
+
+        <li><a href="">Forum</a></li>
+        
+        <li><a href="">Home</a></li>
+    </ul>
+</nav>
+

@@ -1,0 +1,11 @@
+* {
+    margin: 0;
+    padding: 0;
+    box-sizing: border-box;
+}
+
+:root {
+    --verde-escuro-90: #007A68;
+    --verde-claro-10: #CFF1EC;
+    --font-24: 500 24px 'Roboto Condensed', arial;
+}

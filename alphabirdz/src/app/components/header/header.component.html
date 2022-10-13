@@ -1,0 +1,31 @@
+<header class="header" *ngIf="mobile">
+    <button class="header__menu" (click)="openMenu()">
+        <img src="../../../assets/img/menu_phosphor_icon.svg" alt="ícone de menu feito por tres linha">
+    </button>
+
+    <h1 class="header__logo">
+        <img src="../../../assets/img/alphabirdz-logo.png" alt="Alphabirdz logo">
+    </h1>
+
+    <button class="header__menu" (click)="openUser()">
+        <img src="../../../assets/img/user_phosphor_icon.svg" alt="ícone de usuário feito pela silhueta de um busto">
+    </button>
+</header>
+
+<header class="header--desktop" *ngIf="!mobile">
+    <h1 class="header__logo">
+        <img src="../../../assets/img/alphabirdz-logo.png" alt="Alphabirdz logo">
+    </h1>
+
+    <div class="header__desktop">
+        <app-menu-list></app-menu-list>
+        <button class="header__menu" (click)="openUser()">
+            <img src="../../../assets/img/user_phosphor_icon.svg" alt="ícone de usuário feito pela silhueta de um busto">
+        </button>
+    </div>
+</header>
+
+
+<app-menu-list *ngIf="menuOpen"></app-menu-list>
+<app-user-list *ngIf="userOpen"></app-user-list>
+
