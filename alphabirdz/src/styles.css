@@ -1,3 +1,5 @@
+@import url('https://fonts.googleapis.com/css2?family=Roboto+Flex:opsz,wght@8..144,400;8..144,500&display=swap');
+
 * {
     margin: 0;
     padding: 0;
@@ -7,5 +9,9 @@
 :root {
     --verde-escuro-90: #007A68;
     --verde-claro-10: #CFF1EC;
-    --font-24: 500 24px 'Roboto Condensed', arial;
+    --drop-shadow: rgba(10, 10, 10, 0.4);
+    --font-32-medium: 500 32px 'Roboto Flex', arial;
+    --font-32-normal: 500 32px 'Roboto Flex', arial;
+    --font-24-medium: 500 24px 'Roboto Flex', arial;
+    --font-16-medium: 500 16px 'Roboto Flex', arial;
 }

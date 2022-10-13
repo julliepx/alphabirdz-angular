@@ -26,7 +26,7 @@
 
 .menu__list a {
     text-decoration: none;
-    font: var(--font-24);
+    font: var(--font-16-medium);
     color: var(--verde-escuro-90);
 }
 
@@ -51,7 +51,7 @@
 
 .menu__list--desktop a {
     text-decoration: none;
-    font: var(--font-24);
+    font: var(--font-24-medium);
     color: var(--verde-claro-10);
 }
 
