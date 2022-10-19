@@ -10,8 +10,10 @@
     --verde-escuro-90: #007A68;
     --verde-claro-10: #CFF1EC;
     --drop-shadow: rgba(10, 10, 10, 0.4);
-    --font-32-medium: 500 32px 'Roboto Flex', arial;
-    --font-32-normal: 500 32px 'Roboto Flex', arial;
-    --font-24-medium: 500 24px 'Roboto Flex', arial;
-    --font-16-medium: 500 16px 'Roboto Flex', arial;
+    --font-64-medium: 500 4rem 'Roboto Flex', arial;
+    --font-64-normal: 400 4rem 'Roboto Flex', arial;
+    --font-32-medium: 500 2rem 'Roboto Flex', arial;
+    --font-32-normal: 400 2rem 'Roboto Flex', arial;
+    --font-24-medium: 500 1.5rem 'Roboto Flex', arial;
+    --font-16-medium: 500 1rem 'Roboto Flex', arial;
 }
