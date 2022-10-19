@@ -1,7 +1,5 @@
 # Alphabirdz Angular
 
-
-
 ### iniciando o projeto
 
 Considerando que já tenha instalados o gerenciador de pacotes NPM, o Angular e o Angular CLI, siga os passos abaixo.
