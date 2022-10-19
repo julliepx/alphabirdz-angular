@@ -6,7 +6,9 @@ import { AppComponent } from './app.component';
 import { HeaderComponent } from './components/header/header.component';
 import { MenuListComponent } from './components/menu-list/menu-list.component';
 import { UserListComponent } from './components/user-list/user-list.component';
-import { LadingPageComponent } from './components/lading-page/lading-page.component';
+import { LandingPageComponent } from './components/landing-page/landing-page.component';
+import { GuideComponent } from './components/guide/guide.component';
+import { ForumComponent } from './components/forum/forum.component';
 
 @NgModule({
   declarations: [
@@ -14,7 +16,9 @@ import { LadingPageComponent } from './components/lading-page/lading-page.compon
     HeaderComponent,
     MenuListComponent,
     UserListComponent,
-    LadingPageComponent
+    LandingPageComponent,
+    GuideComponent,
+    ForumComponent
   ],
   imports: [
     BrowserModule,

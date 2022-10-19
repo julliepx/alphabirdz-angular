@@ -1,12 +1,12 @@
 import { NgModule } from '@angular/core';
 import { RouterModule, Routes } from '@angular/router';
-import { HomeComponent } from './home/home.component';
-import { GuideComponent } from './guide/guide.component';
-import { ForumComponent } from './forum/forum.component';
+import { LandingPageComponent } from './components/landing-page/landing-page.component';
+import { GuideComponent } from './components/guide/guide.component';
+import { ForumComponent } from './components/forum/forum.component';
 
 const routes: Routes = [
-  { path: '', component: HomeComponent },
-  { path: 'guia', component: GuideComponent },
+  { path: '', component: LandingPageComponent },
+  { path: 'guide', component: GuideComponent },
   { path: 'forum', component: ForumComponent }
 ];
 
