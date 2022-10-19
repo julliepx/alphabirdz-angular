@@ -17,6 +17,7 @@
     background-color: transparent;
     border: none;
     margin: 0 1rem;
+    cursor: pointer;
 }
 
 .header__menu img {
