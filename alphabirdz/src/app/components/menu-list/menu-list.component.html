@@ -2,15 +2,15 @@
     <ul>
         <li>
             <img src="../../../assets/img/bird_phosphor_icon.svg" alt="Ícone de pássaro do phosphor icon"> 
-            <a href="">Guia de bolso</a>
+            <a [routerLink]="['/guide']">Guia de bolso</a>
         </li>
         <li>
             <img src="../../../assets/img/forum_phosphor_icon.svg" alt="Ícone de dois balões de conversa do phosphor icon se sobrepondo">
-            <a href="">Forum</a>
+            <a [routerLink]="['/forum']">Forum</a>
         </li>
         <li>
             <img src="../../../assets/img/home_phosphor_icon.svg" alt="Ícone de casa do phosphor icon para simbolizar a pagina inicial">
-            <a href="">Home</a>
+            <a [routerLink]="['/']">Home</a>
         </li>
     </ul>
 </nav>
@@ -18,11 +18,11 @@
 
 <nav class="menu__list--desktop" *ngIf="!mobile">
     <ul>
-        <li><a href="">Guia de bolso</a></li>
+        <li><a [routerLink]="['/guia']">Guia de bolso</a></li>
 
-        <li><a href="">Forum</a></li>
+        <li><a [routerLink]="['/forum']">Forum</a></li>
         
-        <li><a href="">Home</a></li>
+        <li><a [routerLink]="['/']">Home</a></li>
     </ul>
 </nav>
 
