@@ -2,11 +2,11 @@ import { Component, OnInit } from '@angular/core';
 import { BreakpointObserver, BreakpointState } from '@angular/cdk/layout';
 
 @Component({
-  selector: 'app-lading-page',
-  templateUrl: './lading-page.component.html',
-  styleUrls: ['./lading-page.component.css']
+  selector: 'app-landing-page',
+  templateUrl: './landing-page.component.html',
+  styleUrls: ['./landing-page.component.css']
 })
-export class LadingPageComponent implements OnInit {
+export class LandingPageComponent implements OnInit {
 
   constructor(public breakpointObserver: BreakpointObserver) { }
   mobile: boolean = true;
@@ -21,5 +21,5 @@ export class LadingPageComponent implements OnInit {
         }
       });
   }
-
+  
 }
