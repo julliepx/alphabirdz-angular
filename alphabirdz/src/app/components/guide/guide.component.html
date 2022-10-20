@@ -1,1 +1,13 @@
-<p>guide works!</p>
+<p>Guia de todos os pássaros maravilhosos!</p>
+
+<ul class="cards">
+
+<div *ngFor="let bird of birds" class="cards__item" >
+    <h3 >
+        {{ bird.portugueseName }}
+    </h3>
+    <p>
+        {{ bird.latinName }}, {{ bird.habitat }}
+    </p>
+</div>
+</ul>
