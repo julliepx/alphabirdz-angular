@@ -1,13 +1,16 @@
-<p>Guia de todos os pássaros maravilhosos!</p>
-
-<ul class="cards">
-
-<div *ngFor="let bird of birds" class="cards__item" >
-    <h3 >
-        {{ bird.portugueseName }}
-    </h3>
-    <p>
-        {{ bird.latinName }}, {{ bird.habitat }}
-    </p>
-</div>
-</ul>
+<main>
+    <div class="card" *ngFor="let bird of birds">
+        <div class="top_card">
+            <div class="circle"></div>
+            <p> {{ bird.portugueseName }} </p>
+        </div>
+        <img src="../../../assets/img/bird_phosphor_icon.svg" alt="Avatar" class="bird_img">
+        <div class="footer_card">
+            <div class="habitat">
+                <h4>Habitat</h4>
+                <p>{{ bird.habitat }} </p>
+            </div>
+            <img src="../../../assets/img/gender_frame.svg" alt="" class="gender">
+        </div>
+    </div>
+</main>
