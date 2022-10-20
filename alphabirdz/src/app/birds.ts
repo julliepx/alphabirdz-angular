@@ -29,5 +29,25 @@ export const birds = [
         habitat: 'wetlands',
         family: 'Strigidae',
         bird_size: '25cm'
+    },
+    {
+        id: 3,
+        englishName: 'great egret',
+        latinName: 'ardea alba',
+        portugueseName: 'garça-real',
+        dominantColor: 'white',
+        habitat: 'wetlands',
+        family: 'ardeidae',
+        bird_size: '65cm'
+    },
+    {
+        id: 4,
+        englishName: 'Burrowing Owl',
+        latinName: 'Athene cunicularia',
+        portugueseName: 'coruja-buraqueira',
+        dominantColor: 'brown',
+        habitat: 'wetlands',
+        family: 'Strigidae',
+        bird_size: '25cm'
     }
 ]
