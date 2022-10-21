@@ -11,6 +11,7 @@ import { LandingPageComponent } from './components/landing-page/landing-page.com
 import { GuideComponent } from './components/guide/guide.component';
 import { ForumComponent } from './components/forum/forum.component';
 import { FooterComponent } from './components/footer/footer.component';
+import { BirdService } from './config/bird.service';
 
 @NgModule({
   declarations: [
@@ -28,7 +29,7 @@ import { FooterComponent } from './components/footer/footer.component';
     AppRoutingModule,
     HttpClientModule
   ],
-  providers: [],
+  providers: [BirdService],
   bootstrap: [AppComponent]
 })
 export class AppModule { }
