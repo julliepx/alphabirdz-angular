@@ -1,4 +1,4 @@
-<nav class="menu__list" *ngIf="mobile">
+<nav class="menu">
     <ul>
         <li>
             <img src="../../../assets/img/bird_phosphor_icon.svg" alt="Ícone de pássaro do phosphor icon"> 
@@ -12,17 +12,6 @@
             <img src="../../../assets/img/home_phosphor_icon.svg" alt="Ícone de casa do phosphor icon para simbolizar a pagina inicial">
             <a [routerLink]="['/']">Home</a>
         </li>
-    </ul>
-</nav>
-
-
-<nav class="menu__list--desktop" *ngIf="!mobile">
-    <ul>
-        <li><a [routerLink]="['/guide']">Guia de bolso</a></li>
-
-        <li><a [routerLink]="['/forum']">Forum</a></li>
-        
-        <li><a [routerLink]="['/']">Home</a></li>
     </ul>
 </nav>
 
