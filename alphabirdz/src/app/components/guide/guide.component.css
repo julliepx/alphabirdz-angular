@@ -1,0 +1,68 @@
+
+main {
+    display: flex;
+    justify-content: center;
+    max-width: 1200px;
+    margin: 32px auto;
+    gap: 48px;
+    flex-wrap: wrap;
+}
+
+.card {
+    display: flex;
+    flex-direction: column;
+    justify-content: space-between;
+    width: 544px;
+    height: 576px;
+
+    box-shadow: 4px 4px 20px rgba(0, 0, 0, 0.25);
+    border-radius: 16px;
+}
+  
+.card:hover {
+    box-shadow: 0 8px 16px 0 rgba(0,0,0,0.2);
+}
+
+.top_card {
+    display: flex;
+    font: var(--font-32-medium);
+    color: var(--verde-escuro-90);
+    text-transform: capitalize;
+    justify-content: flex-start;
+    align-items: center;
+}
+
+.circle {
+    width: 48px;
+    height: 48px;
+    background: #C3C3C3;
+    border-radius: 50%;
+    margin: 16px;
+}
+
+.bird_img {
+    width: 544px;
+    height: 384px;
+    background-color: #a3a3a3;
+}
+
+.footer_card {
+    display: flex;
+    justify-content: space-between;
+    margin: 16px;
+}
+
+.habitat h4{
+    font: var(--font-32-medium);
+    color: var(--verde-escuro-90);
+}
+
+.habitat p {
+    font: var(--font-24-normal);
+    color: var(--verde-escuro-90);
+}
+
+.gender {
+    width: 48px;
+    height: 48px;
+}
