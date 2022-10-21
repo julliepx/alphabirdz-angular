@@ -10,6 +10,7 @@ import { UserListComponent } from './components/user-list/user-list.component';
 import { LandingPageComponent } from './components/landing-page/landing-page.component';
 import { GuideComponent } from './components/guide/guide.component';
 import { ForumComponent } from './components/forum/forum.component';
+import { FooterComponent } from './components/footer/footer.component';
 
 @NgModule({
   declarations: [
@@ -19,7 +20,8 @@ import { ForumComponent } from './components/forum/forum.component';
     UserListComponent,
     LandingPageComponent,
     GuideComponent,
-    ForumComponent
+    ForumComponent,
+    FooterComponent
   ],
   imports: [
     BrowserModule,
