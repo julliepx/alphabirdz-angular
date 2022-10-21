@@ -8,7 +8,6 @@ import { BreakpointObserver, BreakpointState } from '@angular/cdk/layout';
 })
 export class HeaderComponent implements OnInit {
   mobile!: boolean;
-  _reload: boolean = true;
   menuOpen: boolean = false;
   userOpen: boolean = false;
 
@@ -28,16 +27,11 @@ export class HeaderComponent implements OnInit {
 
   openMenu() {
     this.menuOpen = !this.menuOpen;
-    if (this.userOpen == true) this.userOpen = false
+    if (this.userOpen) this.userOpen = false
   }
 
   openUser() {
     this.userOpen = !this.userOpen;
-    if (this.menuOpen == true) this.menuOpen = false
+    if (this.menuOpen) this.menuOpen = false
   }
-
-  public reload() {
-    !this._reload
-  }
-
 }
