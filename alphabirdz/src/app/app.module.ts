@@ -8,10 +8,11 @@ import { HeaderComponent } from './components/header/header.component';
 import { MenuListComponent } from './components/menu-list/menu-list.component';
 import { UserListComponent } from './components/user-list/user-list.component';
 import { LandingPageComponent } from './components/landing-page/landing-page.component';
-import { GuideComponent } from './components/guide/guide.component';
+import { CardComponent } from './components/card/card.component';
 import { ForumComponent } from './components/forum/forum.component';
 import { FooterComponent } from './components/footer/footer.component';
-import { BirdService } from './config/bird.service';
+import { BirdService } from './services/bird.service';
+import { GuideComponent } from './components/guide/guide.component';
 
 @NgModule({
   declarations: [
@@ -20,9 +21,10 @@ import { BirdService } from './config/bird.service';
     MenuListComponent,
     UserListComponent,
     LandingPageComponent,
-    GuideComponent,
+    CardComponent,
     ForumComponent,
-    FooterComponent
+    FooterComponent,
+    GuideComponent
   ],
   imports: [
     BrowserModule,
