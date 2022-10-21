@@ -1,5 +1,4 @@
 import { Component, OnInit } from '@angular/core';
-import { BreakpointObserver, BreakpointState } from '@angular/cdk/layout';
 
 @Component({
   selector: 'app-menu-list',
@@ -8,18 +7,9 @@ import { BreakpointObserver, BreakpointState } from '@angular/cdk/layout';
 })
 export class MenuListComponent implements OnInit {
   mobile!: boolean;
-  constructor(public breakpointObserver: BreakpointObserver) { }
+  constructor() { }
 
   ngOnInit(): void {
-    this.breakpointObserver
-      .observe(['(max-width: 576px)'])
-      .subscribe((state: BreakpointState) => {
-        if (state.matches) {
-          this.mobile = true;
-        } else {
-          this.mobile = false;
-        }
-      });
   }
 
 }
