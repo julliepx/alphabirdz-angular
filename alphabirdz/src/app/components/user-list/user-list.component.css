@@ -1,0 +1,11 @@
+.menu__list {
+    min-width: 220px;
+    width: 80%;
+    max-width: 500px;
+    min-height: 500px;
+    position: absolute;
+    right: 0;
+    display: flex;
+    justify-content: center;
+    background-color: var(--verde-claro-10);
+}

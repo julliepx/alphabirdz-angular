@@ -1,13 +1,21 @@
 <header class="header">
-    <button class="header__menu">
+    <button class="header__button header__button--menu" (click)="openMenu()">
         <img src="../../../assets/img/menu_phosphor_icon.svg" alt="ícone de menu feito por tres linha">
     </button>
 
     <h1 class="header__logo">
-        <img src="../../../assets/img/alphabirdz-logo.png" alt="Alphabirdz logo">
+        <a [routerLink]="['/']"><img src="../../../assets/img/alphabirdz-logo.png" alt="Alphabirdz logo"></a>
     </h1>
-
-    <button class="header__menu">
-        <img src="../../../assets/img/user_phosphor_icon.svg" alt="ícone de usuário feito pela silhueta de um busto">
-    </button>
+    
+    <div class="test">
+        <app-menu-list *ngIf="!mobile"></app-menu-list>
+        <button class="header__button" (click)="openUser()">
+            <img src="../../../assets/img/user_phosphor_icon.svg" alt="ícone de usuário feito pela silhueta de um busto">
+        </button>
+    </div>
+    
 </header>
+
+<app-menu-list *ngIf="menuOpen && mobile"></app-menu-list>
+<app-user-list *ngIf="userOpen"></app-user-list>
+

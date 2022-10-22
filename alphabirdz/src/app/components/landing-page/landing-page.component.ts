@@ -2,17 +2,14 @@ import { Component, OnInit } from '@angular/core';
 import { BreakpointObserver, BreakpointState } from '@angular/cdk/layout';
 
 @Component({
-  selector: 'app-header',
-  templateUrl: './header.component.html',
-  styleUrls: ['./header.component.css']
+  selector: 'app-landing-page',
+  templateUrl: './landing-page.component.html',
+  styleUrls: ['./landing-page.component.css']
 })
-export class HeaderComponent implements OnInit {
-  mobile!: boolean;
-  menuOpen: boolean = false;
-  userOpen: boolean = false;
+export class LandingPageComponent implements OnInit {
 
   constructor(public breakpointObserver: BreakpointObserver) { }
-
+  mobile: boolean = true;
   ngOnInit(): void {
     this.breakpointObserver
       .observe(['(max-width: 992px)'])
@@ -25,13 +22,4 @@ export class HeaderComponent implements OnInit {
       });
   }
 
-  openMenu() {
-    this.menuOpen = !this.menuOpen;
-    if (this.userOpen) this.userOpen = false
-  }
-
-  openUser() {
-    this.userOpen = !this.userOpen;
-    if (this.menuOpen) this.menuOpen = false
-  }
 }
