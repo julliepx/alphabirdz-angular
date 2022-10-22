@@ -1,0 +1,105 @@
+main {
+    display: flex;
+    justify-content: center;
+    max-width: 1200px;
+    margin: 1rem auto;
+    gap: 16px;
+    flex-wrap: wrap;
+}
+
+.card {
+    display: flex;
+    flex-direction: column;
+    justify-content: space-between;
+    min-width: 300px;
+    width: 544px;
+    max-height: 576px;
+    box-shadow: var(--drop-shadow);
+    border-radius: 16px;
+}
+
+.card:hover {
+    transform: scale(1.01);
+}
+
+.card__container--header {
+    display: flex;
+    justify-content: flex-start;
+    align-items: center;
+    font: var(--font-24-medium);
+    color: var(--verde-escuro-90);
+}
+
+.circle {
+    width: 38px;
+    height: 32px;
+    background: #C3C3C3;
+    border-radius: 50%;
+    margin: 16px;
+}
+
+.card__container--img {
+    display: flex;
+    justify-content: center;
+    align-items: center;
+    width: 100%;
+    height: 384px;
+    background-color: #C3C3C3;
+}
+
+.bird_img {
+    width: 80%;
+    height: 80%;
+}
+
+.card_container--footer {
+    display: flex;
+    justify-content: space-between;
+    align-items: center;
+    margin: 16px;
+}
+
+.habitat h4{
+    font: var(--font-24-medium);
+    color: var(--verde-escuro-90);
+}
+
+.habitat p {
+    font: var(--font-16-normal);
+    color: var(--verde-escuro-90);
+}
+
+.gender {
+    width: 48px;
+    height: 48px;
+}
+
+
+@media (min-width: 992px) {
+    main {
+        margin: 2rem auto;
+        gap: 48px;
+    }
+
+    .card {
+        box-shadow: var(--drop-shadow-desktop);
+    }
+
+    .card__container--header {
+        font: var(--font-32-medium);
+    }
+
+    .circle {
+        width: 48px;
+        height: 48px;
+        margin: 16px 8px 16px 16px;
+    }
+
+    .habitat h4{
+        font: var(--font-32-medium);
+    }
+    
+    .habitat p {
+        font: var(--font-24-normal);
+    }
+}

@@ -1,18 +1,1 @@
-<main>
-    <div class="card" *ngFor="let bird of birds">
-        <div class="card__container--header">
-            <div class="circle"></div>
-            <p> {{ bird.portugueseName | titlecase }} </p>
-        </div>
-        <div class="card__container--img">
-            <img src="../../../assets/img/bird_phosphor_icon.svg" alt="Avatar" class="bird_img">
-        </div>
-        <div class="card_container--footer">
-            <div class="habitat">
-                <h4>Habitat</h4>
-                <p>{{ bird.habitat | titlecase }} </p>
-            </div>
-            <img src="../../../assets/img/gender_frame.svg" alt="" class="gender">
-        </div>
-    </div>
-</main>
+<app-card></app-card>

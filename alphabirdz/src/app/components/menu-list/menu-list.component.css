@@ -29,6 +29,10 @@
     color: var(--verde-escuro-90);
 }
 
+.menu a:hover {
+    transform: scale(1.03);
+}
+
 .menu img {
     width: 24px;
     height: 24px;
