@@ -1,5 +1,6 @@
 export interface Birds {
     id: number;
+    image: string;
     englishName: string;
     latinName: string;
     portugueseName: string;
