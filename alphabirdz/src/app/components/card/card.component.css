@@ -13,7 +13,6 @@ main {
     justify-content: space-between;
     min-width: 300px;
     width: 544px;
-    max-height: 576px;
     box-shadow: var(--drop-shadow);
     border-radius: 16px;
 }
@@ -52,19 +51,35 @@ main {
     height: 100%;
 }
 
-.card_container--footer {
+.card_container--footer{
     display: flex;
     justify-content: space-between;
     align-items: center;
     margin: 16px;
 }
 
-.habitat h4{
+.card_container--details {
+    margin: 0 16px 16px 16px;
+    display: flex;
+    display: none;
+    flex-direction: column;
+    gap: 16px;
+}
+
+button {
+    margin: 0 16px 32px 16px;
+    background-color: transparent;
+    color: var(--verde-escuro-90);
+    border: none;
+    font-size: var(--font-16-normal);
+}
+
+h4{
     font: var(--font-24-medium);
     color: var(--verde-escuro-90);
 }
 
-.habitat p {
+p {
     font: var(--font-16-normal);
     color: var(--verde-escuro-90);
 }

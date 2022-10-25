@@ -1,11 +1,11 @@
 <main>
-    <div class="card" *ngFor="let bird of birds">
+    <div id={{bird.id}} class="card" *ngFor="let bird of birds">
         <div class="card__container--header">
             <div class="circle"></div>
             <p> {{ bird.portugueseName | titlecase }} </p>
         </div>
         <div class="card__container--img">
-            <img src="{{bird.image}}" alt="Avatar" class="bird_img">
+            <img src="{{ bird.image }}" alt="Avatar" class="bird_img">
         </div>
         <div class="card_container--footer">
             <div class="habitat">
@@ -13,7 +13,31 @@
                 <p *ngIf="bird.habitat != null"> {{ bird.habitat | titlecase }} </p>
                 <p *ngIf="bird.habitat == ''"> Não informado </p>
             </div>
-            <img src="../../../assets/img/gender_frame.svg" alt="" class="gender">
+
+            <img *ngIf="bird.gender == 'male'" src="../../../assets/img/gender_frame.svg" alt="" class="gender">
+            <img *ngIf="bird.gender == 'female'" src="../../../assets/img/gender-female.svg" alt="" class="gender">
         </div>
+
+        <div class="card_container--details" [style.display]="chatIsToggled ? 'display: block' : 'display: none'">
+            <div>
+                <h4> Nome em latim </h4>
+                <p> {{bird.latinName}} </p>
+            </div>
+
+            <div>
+                <h4> Nome em Inglês</h4>
+                <p> {{bird.englishName }} </p>
+            </div>
+            <div>
+                <h4> Família </h4>
+                <p> {{bird.family}} </p>
+            </div>
+
+            <div>
+                <h4> Tamanho </h4>
+                <p> {{bird.birdSize}} </p>
+            </div>
+        </div>
+        <button (click)="showDetails()"> {{status}} </button>
     </div>
 </main>
