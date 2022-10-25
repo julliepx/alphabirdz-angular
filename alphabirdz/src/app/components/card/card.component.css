@@ -1,7 +1,6 @@
 main {
     display: flex;
     justify-content: center;
-    max-width: 1200px;
     margin: 1rem auto;
     gap: 16px;
     flex-wrap: wrap;
