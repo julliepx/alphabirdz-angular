@@ -1,3 +1,4 @@
+import { isNgTemplate } from '@angular/compiler';
 import { Component, OnInit } from '@angular/core';
 import { Birds } from 'src/app/interfaces/birds';
 import { BirdService } from 'src/app/services/bird.service';
@@ -12,10 +13,8 @@ import { BirdService } from 'src/app/services/bird.service';
 export class CardComponent implements OnInit {
 
   birds: Birds[] = [];
-  isOpen: boolean = false;
-  status: string = 'Mais informações';
-  display: string = 'none'
-
+  //status: string = 'Mais informações';
+  //isOpen: boolean = false;
 
   constructor(private birdService: BirdService) {
       this.getAllBirds();
@@ -27,8 +26,21 @@ export class CardComponent implements OnInit {
       this.birdService.getAllBirds().subscribe(data => {this.birds = data});
   }
   
-  showDetails(){
-      this.isOpen == true ? this.display = 'flex' : this.display = 'none';
-      this.isOpen == true ? this.status = 'Menos informações' : this.status = 'Mais informações';
+  showDetails(id: number){
+    const birdCard = document.getElementById(`${id}`);
+    const infoButton = document.getElementById("infoButton")
+    
+    if (birdCard?.classList.contains("hide_details")){
+      birdCard?.classList.remove("hide_details");
+      if (infoButton != undefined){
+        infoButton.innerHTML = "Menos informações"
+      }
+    }else{
+      birdCard?.classList.add("hide_details");
+      if (infoButton != undefined){
+        infoButton.innerHTML = "Mais informações"
+      }
+    }
+    console.log(birdCard);
   }
 }

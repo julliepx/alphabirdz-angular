@@ -61,9 +61,12 @@ main {
 .card_container--details {
     margin: 0 16px 16px 16px;
     display: flex;
-    display: none;
     flex-direction: column;
     gap: 16px;
+}
+
+.hide_details {
+    display: none;
 }
 
 button {

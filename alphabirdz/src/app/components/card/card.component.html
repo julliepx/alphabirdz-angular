@@ -1,5 +1,5 @@
 <main>
-    <div id={{bird.id}} class="card" *ngFor="let bird of birds">
+    <div class="card" *ngFor="let bird of birds">
         <div class="card__container--header">
             <div class="circle"></div>
             <p> {{ bird.portugueseName | titlecase }} </p>
@@ -18,7 +18,7 @@
             <img *ngIf="bird.gender == 'female'" src="../../../assets/img/gender-female.svg" alt="" class="gender">
         </div>
 
-        <div class="card_container--details" [style.display]="chatIsToggled ? 'display: block' : 'display: none'">
+        <div class="card_container--details" id="{{bird.id}}" class="hide_details">
             <div>
                 <h4> Nome em latim </h4>
                 <p> {{bird.latinName}} </p>
@@ -38,6 +38,7 @@
                 <p> {{bird.birdSize}} </p>
             </div>
         </div>
-        <button (click)="showDetails()"> {{status}} </button>
+        <button id="infoButton" (click)="showDetails(bird.id)" > Mais informações </button>
+        <script src="./card.component.ts"></script>
     </div>
 </main>
