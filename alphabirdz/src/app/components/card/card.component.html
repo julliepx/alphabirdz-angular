@@ -1,7 +1,7 @@
 <main>
     <div class="card" *ngFor="let bird of birds">
         <div class="card__container--header">
-            <div class="circle"></div>
+            <div class="circle" [style.backgroundColor]="bird.dominantColor"></div>
             <h2> {{ bird.portugueseName | titlecase }} </h2>
         </div>
         <div class="card__container--img">
@@ -10,7 +10,7 @@
         <div class="card_container--footer">
             <div class="habitat">
                 <h4>Habitat</h4>
-                <p *ngIf="bird.habitat != null"> {{ bird.habitat | titlecase }} </p>
+                <p *ngIf="bird.habitat != null"> {{ bird.habitat }} </p>
                 <p *ngIf="bird.habitat == ''"> Não informado </p>
             </div>
 

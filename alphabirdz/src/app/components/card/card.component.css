@@ -1,7 +1,6 @@
 main {
     display: flex;
     justify-content: center;
-    max-width: 1200px;
     margin: 1rem auto;
     gap: 16px;
     flex-wrap: wrap;
@@ -36,7 +35,8 @@ main {
 .circle {
     width: 38px;
     height: 32px;
-    background: #C3C3C3;
+    background: #FFFFFF;
+    border: 2px solid var(--verde-escuro-90);
     border-radius: 50%;
     margin: 16px;
 }
@@ -51,7 +51,6 @@ main {
 
 .bird_img {
     width: 100%;
-
 }
 
 .card_container--footer{
@@ -89,6 +88,10 @@ button {
 p {
     font: var(--font-16-normal);
     color: var(--verde-escuro-90);
+}
+
+.habitat p::first-letter {
+    text-transform: uppercase;
 }
 
 .gender {
