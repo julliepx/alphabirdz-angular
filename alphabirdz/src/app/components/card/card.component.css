@@ -11,7 +11,7 @@ main {
     flex-direction: column;
     justify-content: space-between;
     min-width: 300px;
-    width: 544px;
+    max-width: 90%;
     box-shadow: var(--drop-shadow);
     border-radius: 16px;
     height: fit-content;
@@ -33,7 +33,7 @@ main {
 }
 
 .circle {
-    width: 38px;
+    width: 32px;
     height: 32px;
     background: #FFFFFF;
     border: 2px solid var(--verde-escuro-90);
@@ -108,6 +108,7 @@ p {
 
     .card {
         box-shadow: var(--drop-shadow-desktop);
+        width: 544px;
     }
 
     .card__container--header {
