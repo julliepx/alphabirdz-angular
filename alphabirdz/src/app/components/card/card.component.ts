@@ -28,7 +28,7 @@ export class CardComponent implements OnInit {
   
   showDetails(id: number){
     const birdCard = document.getElementById(`${id}`);
-    const infoButton = document.getElementById("infoButton")
+    const infoButton = document.getElementById(`button${id}`)
     
     if (birdCard?.classList.contains("hide_details")){
       birdCard?.classList.remove("hide_details");

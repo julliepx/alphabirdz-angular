@@ -2,7 +2,7 @@
     <div class="card" *ngFor="let bird of birds">
         <div class="card__container--header">
             <div class="circle"></div>
-            <p> {{ bird.portugueseName | titlecase }} </p>
+            <h2> {{ bird.portugueseName | titlecase }} </h2>
         </div>
         <div class="card__container--img">
             <img src="{{ bird.image }}" alt="Avatar" class="bird_img">
@@ -18,7 +18,7 @@
             <img *ngIf="bird.gender == 'female'" src="../../../assets/img/gender-female.svg" alt="" class="gender">
         </div>
 
-        <div class="card_container--details" id="{{bird.id}}" class="hide_details">
+        <div class="hide_details card_container--details" id="{{bird.id}}">
             <div>
                 <h4> Nome em latim </h4>
                 <p> {{bird.latinName}} </p>
@@ -38,7 +38,7 @@
                 <p> {{bird.birdSize}} </p>
             </div>
         </div>
-        <button id="infoButton" (click)="showDetails(bird.id)" > Mais informações </button>
+        <button id="button{{bird.id}}" (click)="showDetails(bird.id)" > Mais informações </button>
         <script src="./card.component.ts"></script>
     </div>
 </main>
