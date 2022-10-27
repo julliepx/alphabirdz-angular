@@ -13,6 +13,8 @@ import { ForumComponent } from './components/forum/forum.component';
 import { FooterComponent } from './components/footer/footer.component';
 import { BirdService } from './services/bird.service';
 import { GuideComponent } from './components/guide/guide.component';
+import { PostService } from './services/post.service';
+import { UserService } from './services/user.service';
 
 @NgModule({
   declarations: [
@@ -31,7 +33,7 @@ import { GuideComponent } from './components/guide/guide.component';
     AppRoutingModule,
     HttpClientModule
   ],
-  providers: [BirdService],
+  providers: [BirdService, PostService, UserService],
   bootstrap: [AppComponent]
 })
 export class AppModule { }

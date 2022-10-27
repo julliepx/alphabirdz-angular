@@ -11,34 +11,34 @@
             <div class="habitat">
                 <h4>Habitat</h4>
                 <p *ngIf="bird.habitat != null"> {{ bird.habitat }} </p>
-                <p *ngIf="bird.habitat == ''"> Não informado </p>
+                <p *ngIf="bird.habitat == ''"> Diversos </p>
             </div>
 
             <img *ngIf="bird.gender == 'male'" src="../../../assets/img/gender_frame.svg" alt="" class="gender">
             <img *ngIf="bird.gender == 'female'" src="../../../assets/img/gender-female.svg" alt="" class="gender">
+            <img *ngIf="bird.gender == ''" src="../../../assets/img/gender-young.svg" alt="" class="gender">
         </div>
 
         <div class="hide_details card_container--details" id="{{bird.id}}">
             <div>
-                <h4> Nome em latim </h4>
-                <p> {{bird.latinName}} </p>
+                <h4> Nome em Latim </h4>
+                <p> {{bird.latinName | titlecase }} </p>
             </div>
 
             <div>
                 <h4> Nome em Inglês</h4>
-                <p> {{bird.englishName }} </p>
+                <p> {{bird.englishName | titlecase }} </p>
             </div>
             <div>
                 <h4> Família </h4>
-                <p> {{bird.family}} </p>
+                <p> {{bird.family | titlecase }} </p>
             </div>
 
             <div>
                 <h4> Tamanho </h4>
-                <p> {{bird.birdSize}} </p>
+                <p> {{bird.birdSize | titlecase }} </p>
             </div>
         </div>
         <button id="button{{bird.id}}" (click)="showDetails(bird.id)" > Mais informações </button>
-        <script src="./card.component.ts"></script>
     </div>
 </main>
