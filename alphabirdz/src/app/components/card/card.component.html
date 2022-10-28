@@ -1,5 +1,5 @@
 <main>
-    <div *ngFor="let bird of birds">
+    <div *ngFor="let bird of birds"> <!-- possibilidade de trocar a div por ng-container -->
         <div class="card" *ngIf="toInteger(bird[filter[0]]) <= toInteger(filter[1])">
             <div class="card__container--header">
                 <div class="circle" [style.backgroundColor]="bird.dominantColor"></div>
