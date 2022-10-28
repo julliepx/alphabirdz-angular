@@ -6,6 +6,7 @@
 
 .container {
     display: flex;
+    justify-content: flex-start;
     gap: 1rem;
     padding: .5rem 1rem;
     overflow: scroll;
@@ -64,4 +65,15 @@ option {
 .container__filter {
     overflow: -moz-scrollbars-none;
     -ms-overflow-style: none; 
+}
+
+@media (min-width: 992px) {
+    .container {
+        display: flex;
+        justify-content: center;
+        gap: 1rem;
+        padding: .5rem 1rem;
+        overflow: scroll;
+        scrollbar-width: none;
+    }
 }

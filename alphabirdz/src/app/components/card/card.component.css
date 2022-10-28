@@ -1,10 +1,10 @@
 main {
     display: flex;
     justify-content: center;
-    max-width: 1200px;
+    align-items: center;
     margin: 1rem auto;
-    gap: 16px;
     flex-wrap: wrap;
+    gap: 16px;
 }
 
 .card {
@@ -12,10 +12,10 @@ main {
     flex-direction: column;
     justify-content: space-between;
     min-width: 300px;
-    width: 544px;
-    max-height: 576px;
+    width: 328px;
     box-shadow: var(--drop-shadow);
     border-radius: 16px;
+    height: fit-content;
 }
 
 .card:hover {
@@ -26,14 +26,18 @@ main {
     display: flex;
     justify-content: flex-start;
     align-items: center;
+}
+
+.card__container--header h2 {
     font: var(--font-24-medium);
     color: var(--verde-escuro-90);
 }
 
 .circle {
-    width: 38px;
+    width: 32px;
     height: 32px;
-    background: #C3C3C3;
+    background: #FFFFFF;
+    border: 2px solid var(--verde-escuro-90);
     border-radius: 50%;
     margin: 16px;
 }
@@ -43,30 +47,52 @@ main {
     justify-content: center;
     align-items: center;
     width: 100%;
-    height: 384px;
     background-color: #C3C3C3;
 }
 
 .bird_img {
     width: 100%;
-    height: 100%;
 }
 
-.card_container--footer {
+.card_container--footer{
     display: flex;
     justify-content: space-between;
     align-items: center;
     margin: 16px;
 }
 
-.habitat h4{
+.card_container--details {
+    margin: 0 16px 16px 16px;
+    display: flex;
+    flex-direction: column;
+    gap: 16px;
+}
+
+.hide_details {
+    display: none;
+}
+
+button {
+    margin: 0 16px 32px 16px;
+    background-color: transparent;
+    color: var(--verde-escuro-90);
+    border: none;
+    font-size: var(--font-16-normal);
+}
+
+.card_container--details h4, 
+.card_container--footer h4 {
     font: var(--font-24-medium);
     color: var(--verde-escuro-90);
 }
 
-.habitat p {
+p {
     font: var(--font-16-normal);
     color: var(--verde-escuro-90);
+}
+
+.habitat p::first-letter {
+    text-transform: uppercase;
 }
 
 .gender {
@@ -83,6 +109,7 @@ main {
 
     .card {
         box-shadow: var(--drop-shadow-desktop);
+        width: 544px;
     }
 
     .card__container--header {

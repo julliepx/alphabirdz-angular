@@ -29,9 +29,11 @@ export class SelectFilterComponent implements OnInit {
       latinName: 'string',
       portugueseName: 'string',
       dominantColor: 'green',
+      gender: 'string',
       habitat: 'string',
       family: 'string',
-      birdSize: '24'
+      birdSize: '24',
+      showDetail: false
     },
     {
       id: 1,
@@ -40,9 +42,11 @@ export class SelectFilterComponent implements OnInit {
       latinName: 'string',
       portugueseName: 'string',
       dominantColor: 'blue',
+      gender: 'string',
       habitat: 'string',
       family: 'string',
-      birdSize: '43'
+      birdSize: '43',
+      showDetail: false
     },
     {
       id: 2,
@@ -51,9 +55,11 @@ export class SelectFilterComponent implements OnInit {
       latinName: 'string',
       portugueseName: 'string',
       dominantColor: 'green',
+      gender: 'string',
       habitat: 'string',
       family: 'string',
-      birdSize: '10'
+      birdSize: '10',
+      showDetail: false
     },
     {
       id: 3,
@@ -62,9 +68,11 @@ export class SelectFilterComponent implements OnInit {
       latinName: 'string',
       portugueseName: 'string',
       dominantColor: 'red',
+      gender: 'string',
       habitat: 'string',
       family: 'string',
-      birdSize: '51'
+      birdSize: '51',
+      showDetail: false
     }
   ]
 
@@ -81,11 +89,11 @@ export class SelectFilterComponent implements OnInit {
     this.selected.push(id, value);
   }
 
-  test() {
+  sendFilter() {
     this.filterSelected.emit(this.selected);
   }
 
-  filterColor(arr: Array<Birds>) {
+  filterColors(arr: Array<Birds>) {
     arr.forEach(bird => {
         this.allColors.add(bird.dominantColor);
       });

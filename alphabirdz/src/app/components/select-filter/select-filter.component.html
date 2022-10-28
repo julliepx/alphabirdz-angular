@@ -1,9 +1,8 @@
 <section class="container">
     <div class="filter">
-        
         <select (change)="selectOption($any($event.target).value, $any($event.target).id)"
-                (change)="test()"
-                (mousemove)="filterColor(birds2)"
+                (change)="sendFilter()"
+                (mousemove)="filterColors(birds)"
                 id="color"
                 class="container__filter">
             <option value="">color</option>
@@ -13,7 +12,7 @@
 
     <div class="filter">
         <select (change)="selectOption($any($event.target).value, $any($event.target).id)"
-                (change)="test()"
+                (change)="sendFilter()"
                 id="gender"
                 class="container__filter">
             <option value="">Gênero</option>
@@ -24,7 +23,7 @@
 
     <div class="filter">
         <select (change)="selectOption($any($event.target).value, $any($event.target).id)"
-                (change)="test()"
+                (change)="sendFilter()"
                 id="birdSize"
                 class="container__filter">
             <option value="">Tamanho</option>

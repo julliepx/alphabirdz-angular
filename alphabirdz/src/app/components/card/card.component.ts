@@ -1,3 +1,4 @@
+import { isNgTemplate } from '@angular/compiler';
 import { Component, OnInit, Input } from '@angular/core';
 import { Birds } from 'src/app/interfaces/birds';
 import { BirdService } from 'src/app/services/bird.service';
@@ -8,12 +9,9 @@ import { BirdService } from 'src/app/services/bird.service';
   styleUrls: ['./card.component.css']
 })
 
+
 export class CardComponent implements OnInit {
-  @Input() color: Array<any> = [];
-
-  test32: string = '';
-
-  key: string = "birdSize";
+  @Input() filter: Array<any> = [];
 
   birds: Birds[] = [];
 
@@ -23,44 +21,52 @@ export class CardComponent implements OnInit {
       image: 'string',
       englishName: 'string',
       latinName: 'string',
-      portugueseName: '0',
+      portugueseName: 'string',
       dominantColor: 'green',
+      gender: 'string',
       habitat: 'string',
       family: 'string',
-      birdSize: '24'
+      birdSize: '24',
+      showDetail: false
     },
     {
       id: 1,
       image: 'string',
       englishName: 'string',
       latinName: 'string',
-      portugueseName: '1',
+      portugueseName: 'string',
       dominantColor: 'blue',
+      gender: 'string',
       habitat: 'string',
       family: 'string',
-      birdSize: '43'
+      birdSize: '43',
+      showDetail: false
     },
     {
       id: 2,
       image: 'string',
       englishName: 'string',
       latinName: 'string',
-      portugueseName: '2',
+      portugueseName: 'string',
       dominantColor: 'green',
+      gender: 'string',
       habitat: 'string',
       family: 'string',
-      birdSize: '10'
+      birdSize: '10',
+      showDetail: false
     },
     {
       id: 3,
       image: 'string',
       englishName: 'string',
       latinName: 'string',
-      portugueseName: '3',
+      portugueseName: 'string',
       dominantColor: 'red',
+      gender: 'string',
       habitat: 'string',
       family: 'string',
-      birdSize: '51'
+      birdSize: '51',
+      showDetail: false
     }
   ]
 
@@ -69,23 +75,35 @@ export class CardComponent implements OnInit {
   }
 
   ngOnInit(): void {
-    this.color = ["birdSize", 100];
+    this.filter = ["birdSize", 100];
   }
 
   getAllBirds(): void { 
       this.birdService.getAllBirds().subscribe(data => {this.birds = data});
   }
-
-  onChange(event: Array<string>) {
-    this.test32 = event[0]
-    console.log(this.test32)
-  }
-
+  
   toInteger(str: string) {
     return Number(str)
   }
 
   toString(n: number) {
     return String(n)
+  }
+
+  showDetails(id: number){
+    const birdCard = document.getElementById(`${id}`);
+    const infoButton = document.getElementById(`button${id}`)
+    
+    if (birdCard?.classList.contains("hide_details")){
+      birdCard?.classList.remove("hide_details");
+      if (infoButton != undefined){
+        infoButton.innerHTML = "Menos informações"
+      }
+    }else{
+      birdCard?.classList.add("hide_details");
+      if (infoButton != undefined){
+        infoButton.innerHTML = "Mais informações"
+      }
+    }
   }
 }

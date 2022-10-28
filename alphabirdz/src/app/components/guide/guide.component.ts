@@ -1,5 +1,4 @@
 import { Component, OnInit, Input } from '@angular/core';
-import { SelectFilterComponent } from '../select-filter/select-filter.component';
 
 @Component({
   selector: 'app-guide',
@@ -14,7 +13,7 @@ export class GuideComponent implements OnInit {
     
   }
 
-  test2(event: Array<string>) {
+  reciveData(event: Array<string>) {
     this.selectedColor = event;
   }
 }

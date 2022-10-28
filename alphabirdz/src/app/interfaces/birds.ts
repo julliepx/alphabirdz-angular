@@ -5,7 +5,9 @@ export interface Birds {
     latinName: string;
     portugueseName: string;
     dominantColor: string;
+    gender: string;
     habitat: string;
     family: string;
     birdSize: string;
+    showDetail: boolean;
 }
