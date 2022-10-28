@@ -1,5 +1,5 @@
 import { Component, OnInit, Output, EventEmitter } from '@angular/core';
-import { Birds } from 'src/app/interfaces/birds';
+import { Bird } from 'src/app/interfaces/bird';
 import { BirdService } from 'src/app/services/bird.service';
 
 
@@ -11,7 +11,7 @@ import { BirdService } from 'src/app/services/bird.service';
 
 export class SelectFilterComponent implements OnInit {
   @Output() filterSelected = new EventEmitter();
-  birds: Birds[] = [];
+  birds: Bird[] = [];
   allColors: any = new Set();
   selected: Array<string> = [];
 
@@ -21,7 +21,7 @@ export class SelectFilterComponent implements OnInit {
     size: ""
   };
 
-  birds2: Birds[] = [
+  birds2: Bird[] = [
     {
       id: 0,
       image: 'string',
@@ -33,7 +33,6 @@ export class SelectFilterComponent implements OnInit {
       habitat: 'string',
       family: 'string',
       birdSize: '24',
-      showDetail: false
     },
     {
       id: 1,
@@ -46,7 +45,6 @@ export class SelectFilterComponent implements OnInit {
       habitat: 'string',
       family: 'string',
       birdSize: '43',
-      showDetail: false
     },
     {
       id: 2,
@@ -59,7 +57,6 @@ export class SelectFilterComponent implements OnInit {
       habitat: 'string',
       family: 'string',
       birdSize: '10',
-      showDetail: false
     },
     {
       id: 3,
@@ -72,7 +69,6 @@ export class SelectFilterComponent implements OnInit {
       habitat: 'string',
       family: 'string',
       birdSize: '51',
-      showDetail: false
     }
   ]
 
@@ -93,14 +89,14 @@ export class SelectFilterComponent implements OnInit {
     this.filterSelected.emit(this.selected);
   }
 
-  filterColors(arr: Array<Birds>) {
+  filterColors(arr: Array<Bird>) {
     arr.forEach(bird => {
         this.allColors.add(bird.dominantColor);
       });
   }
 
   getAllBirds() {
-    this.birdService.getAllBirds().subscribe((bird: Birds[]) => {
+    this.birdService.getAllBirds().subscribe((bird: Bird[]) => {
       this.birds = bird;
     });
   }
