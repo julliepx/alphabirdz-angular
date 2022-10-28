@@ -1,6 +1,6 @@
 import { isNgTemplate } from '@angular/compiler';
 import { Component, OnInit, Input } from '@angular/core';
-import { Birds } from 'src/app/interfaces/birds';
+import { Bird } from 'src/app/interfaces/bird';
 import { BirdService } from 'src/app/services/bird.service';
 
 @Component({
@@ -13,9 +13,9 @@ import { BirdService } from 'src/app/services/bird.service';
 export class CardComponent implements OnInit {
   @Input() filter: Array<any> = [];
 
-  birds: Birds[] = [];
+  birds: Bird[] = [];
 
-  birds2: Birds[] = [
+  birds2: Bird[] = [
     {
       id: 0,
       image: 'string',
@@ -27,7 +27,6 @@ export class CardComponent implements OnInit {
       habitat: 'string',
       family: 'string',
       birdSize: '24',
-      showDetail: false
     },
     {
       id: 1,
@@ -40,7 +39,6 @@ export class CardComponent implements OnInit {
       habitat: 'string',
       family: 'string',
       birdSize: '43',
-      showDetail: false
     },
     {
       id: 2,
@@ -53,7 +51,6 @@ export class CardComponent implements OnInit {
       habitat: 'string',
       family: 'string',
       birdSize: '10',
-      showDetail: false
     },
     {
       id: 3,
@@ -66,7 +63,6 @@ export class CardComponent implements OnInit {
       habitat: 'string',
       family: 'string',
       birdSize: '51',
-      showDetail: false
     }
   ]
 
