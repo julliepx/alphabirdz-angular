@@ -1,7 +1,12 @@
 import { NgModule } from '@angular/core';
 import { BrowserModule } from '@angular/platform-browser';
+<<<<<<< HEAD
 import { HttpClientModule } from '@angular/common/http';
 import { FormsModule, ReactiveFormsModule } from '@angular/forms'; // <-- NgModel lives here
+=======
+import { HttpClientModule } from '@angular/common/http'
+import { FormsModule } from '@angular/forms';
+>>>>>>> kaltojullie
 
 import { AppRoutingModule } from './app-routing.module';
 import { AppComponent } from './app.component';
@@ -14,6 +19,7 @@ import { FeedComponent } from './components/feed/feed.component';
 import { FooterComponent } from './components/footer/footer.component';
 import { BirdService } from './services/bird.service';
 import { GuideComponent } from './components/guide/guide.component';
+import { SelectFilterComponent } from './components/select-filter/select-filter.component';
 import { PostService } from './services/post.service';
 import { UserService } from './services/user.service';
 import { SightComponent } from './components/sight/sight.component';
@@ -29,14 +35,20 @@ import { SightComponent } from './components/sight/sight.component';
     FeedComponent,
     FooterComponent,
     GuideComponent,
+    SelectFilterComponent,
+    SelectFilterComponent,
     SightComponent
   ],
   imports: [
     BrowserModule,
     AppRoutingModule,
     HttpClientModule,
+<<<<<<< HEAD
     FormsModule,
     ReactiveFormsModule
+=======
+    FormsModule
+>>>>>>> kaltojullie
   ],
   providers: [BirdService, PostService, UserService],
   bootstrap: [AppComponent]

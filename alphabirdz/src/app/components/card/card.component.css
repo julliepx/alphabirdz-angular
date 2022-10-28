@@ -1,9 +1,10 @@
 main {
     display: flex;
     justify-content: center;
+    align-items: center;
     margin: 1rem auto;
-    gap: 16px;
     flex-wrap: wrap;
+    gap: 16px;
 }
 
 .card {
@@ -11,7 +12,7 @@ main {
     flex-direction: column;
     justify-content: space-between;
     min-width: 300px;
-    max-width: 90%;
+    width: 328px;
     box-shadow: var(--drop-shadow);
     border-radius: 16px;
     height: fit-content;
