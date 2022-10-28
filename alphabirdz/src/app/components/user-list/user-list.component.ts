@@ -7,15 +7,9 @@ import { Component, OnInit } from '@angular/core';
 })
 export class UserListComponent implements OnInit {
 
-  userOpen: boolean = false;
-
   constructor() { }
 
   ngOnInit(): void {
-  }
-
-  openUser() {
-    this.userOpen = !this.userOpen;
   }
 
 }
