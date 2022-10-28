@@ -1,4 +1,4 @@
-export interface Birds {
+export interface Bird {
     id: number;
     image: string;
     englishName: string;
@@ -9,5 +9,4 @@ export interface Birds {
     habitat: string;
     family: string;
     birdSize: string;
-    showDetail: boolean;
 }

@@ -1,6 +1,6 @@
 import { isNgTemplate } from '@angular/compiler';
 import { Component, OnInit } from '@angular/core';
-import { Birds } from 'src/app/interfaces/birds';
+import { Bird } from 'src/app/interfaces/bird';
 import { BirdService } from 'src/app/services/bird.service';
 
 @Component({
@@ -12,7 +12,7 @@ import { BirdService } from 'src/app/services/bird.service';
 
 export class CardComponent implements OnInit {
 
-  birds: Birds[] = [];
+  birds: Bird[] = [];
   //status: string = 'Mais informações';
   //isOpen: boolean = false;
 
