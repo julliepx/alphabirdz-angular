@@ -1,4 +1,5 @@
-import { Component, OnInit } from '@angular/core';
+import { Component, OnInit, Input } from '@angular/core';
+import { SelectFilterComponent } from '../select-filter/select-filter.component';
 
 @Component({
   selector: 'app-guide',
@@ -6,10 +7,14 @@ import { Component, OnInit } from '@angular/core';
   styleUrls: ['./guide.component.css']
 })
 export class GuideComponent implements OnInit {
-
-  constructor() { }
+  selectedColor: Array<string> = [];
+  @Input() filterSelected2: string[] = [];
 
   ngOnInit(): void {
+    
   }
 
+  test2(event: Array<string>) {
+    this.selectedColor = event;
+  }
 }

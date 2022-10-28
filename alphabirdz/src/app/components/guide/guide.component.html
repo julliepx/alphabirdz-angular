@@ -1,1 +1,7 @@
-<app-card></app-card>
+<section >
+    <app-select-filter (filterSelected)="test2($event)"></app-select-filter>
+</section>
+<section style="height: 100vh;" >
+    <app-card [color] = "selectedColor"></app-card>    
+</section>
+

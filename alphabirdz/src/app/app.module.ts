@@ -1,6 +1,7 @@
 import { NgModule } from '@angular/core';
 import { BrowserModule } from '@angular/platform-browser';
 import { HttpClientModule } from '@angular/common/http'
+import { FormsModule } from '@angular/forms';
 
 import { AppRoutingModule } from './app-routing.module';
 import { AppComponent } from './app.component';
@@ -13,6 +14,7 @@ import { ForumComponent } from './components/forum/forum.component';
 import { FooterComponent } from './components/footer/footer.component';
 import { BirdService } from './services/bird.service';
 import { GuideComponent } from './components/guide/guide.component';
+import { SelectFilterComponent } from './components/select-filter/select-filter.component';
 
 @NgModule({
   declarations: [
@@ -24,12 +26,14 @@ import { GuideComponent } from './components/guide/guide.component';
     CardComponent,
     ForumComponent,
     FooterComponent,
-    GuideComponent
+    GuideComponent,
+    SelectFilterComponent
   ],
   imports: [
     BrowserModule,
     AppRoutingModule,
-    HttpClientModule
+    HttpClientModule,
+    FormsModule
   ],
   providers: [BirdService],
   bootstrap: [AppComponent]

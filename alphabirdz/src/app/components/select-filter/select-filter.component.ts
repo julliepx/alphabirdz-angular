@@ -1,21 +1,25 @@
-import { Component, OnInit, Input } from '@angular/core';
+import { Component, OnInit, Output, EventEmitter } from '@angular/core';
 import { Birds } from 'src/app/interfaces/birds';
 import { BirdService } from 'src/app/services/bird.service';
 
+
 @Component({
-  selector: 'app-card',
-  templateUrl: './card.component.html',
-  styleUrls: ['./card.component.css']
+  selector: 'app-select-filter',
+  templateUrl: './select-filter.component.html',
+  styleUrls: ['./select-filter.component.css']
 })
 
-export class CardComponent implements OnInit {
-  @Input() color: Array<any> = [];
-
-  test32: string = '';
-
-  key: string = "birdSize";
-
+export class SelectFilterComponent implements OnInit {
+  @Output() filterSelected = new EventEmitter();
   birds: Birds[] = [];
+  allColors: any = new Set();
+  selected: Array<string> = [];
+
+  filterSelection: object = {
+    color: "",
+    gender: "",
+    size: ""
+  };
 
   birds2: Birds[] = [
     {
@@ -23,7 +27,7 @@ export class CardComponent implements OnInit {
       image: 'string',
       englishName: 'string',
       latinName: 'string',
-      portugueseName: '0',
+      portugueseName: 'string',
       dominantColor: 'green',
       habitat: 'string',
       family: 'string',
@@ -34,7 +38,7 @@ export class CardComponent implements OnInit {
       image: 'string',
       englishName: 'string',
       latinName: 'string',
-      portugueseName: '1',
+      portugueseName: 'string',
       dominantColor: 'blue',
       habitat: 'string',
       family: 'string',
@@ -45,7 +49,7 @@ export class CardComponent implements OnInit {
       image: 'string',
       englishName: 'string',
       latinName: 'string',
-      portugueseName: '2',
+      portugueseName: 'string',
       dominantColor: 'green',
       habitat: 'string',
       family: 'string',
@@ -56,7 +60,7 @@ export class CardComponent implements OnInit {
       image: 'string',
       englishName: 'string',
       latinName: 'string',
-      portugueseName: '3',
+      portugueseName: 'string',
       dominantColor: 'red',
       habitat: 'string',
       family: 'string',
@@ -65,27 +69,31 @@ export class CardComponent implements OnInit {
   ]
 
   constructor(private birdService: BirdService) {
-      this.getAllBirds();
+    this.getAllBirds();
   }
 
   ngOnInit(): void {
-    this.color = ["birdSize", 100];
+    this.getAllBirds();
   }
 
-  getAllBirds(): void { 
-      this.birdService.getAllBirds().subscribe(data => {this.birds = data});
+  selectOption(value: string, id: string) {
+    this.selected = [];
+    this.selected.push(id, value);
   }
 
-  onChange(event: Array<string>) {
-    this.test32 = event[0]
-    console.log(this.test32)
+  test() {
+    this.filterSelected.emit(this.selected);
   }
 
-  toInteger(str: string) {
-    return Number(str)
+  filterColor(arr: Array<Birds>) {
+    arr.forEach(bird => {
+        this.allColors.add(bird.dominantColor);
+      });
   }
 
-  toString(n: number) {
-    return String(n)
+  getAllBirds() {
+    this.birdService.getAllBirds().subscribe((bird: Birds[]) => {
+      this.birds = bird;
+    });
   }
 }
