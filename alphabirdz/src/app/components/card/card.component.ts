@@ -41,6 +41,5 @@ export class CardComponent implements OnInit {
         infoButton.innerHTML = "Mais informações"
       }
     }
-    console.log(birdCard);
   }
 }

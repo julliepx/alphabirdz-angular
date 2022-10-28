@@ -21,24 +21,23 @@
         <div class="hide_details card_container--details" id="{{bird.id}}">
             <div>
                 <h4> Nome em latim </h4>
-                <p> {{bird.latinName}} </p>
+                <p> {{bird.latinName | titlecase}} </p>
             </div>
 
             <div>
                 <h4> Nome em Inglês</h4>
-                <p> {{bird.englishName }} </p>
+                <p> {{bird.englishName | titlecase}} </p>
             </div>
             <div>
                 <h4> Família </h4>
-                <p> {{bird.family}} </p>
+                <p> {{bird.family | titlecase }}</p>
             </div>
 
             <div>
                 <h4> Tamanho </h4>
-                <p> {{bird.birdSize}} </p>
+                <p> {{bird.birdSize}}cm </p>
             </div>
         </div>
-        <button id="button{{bird.id}}" (click)="showDetails(bird.id)" > Mais informações </button>
-        <script src="./card.component.ts"></script>
+        <button id="button{{bird.id}}" (click)="showDetails(bird.id)" ><a> Mais informações </a> </button>
     </div>
 </main>

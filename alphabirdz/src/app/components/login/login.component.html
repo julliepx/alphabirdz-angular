@@ -1,0 +1,22 @@
+<main class="menu__list menu">
+    <div class="login_menu">
+        <h2>Efetuar Login</h2>
+        <div class="form-email">
+            <form>
+                <div class="form-group">
+
+                    <label for="login">E-mail</label>
+
+                    <input type="email" [(ngModel)]="user.email" id="email" name="login" class="form-control">
+        </div>
+        <div class="form-group">
+            <label for="senha">Senha</label>
+            <input type="password" [(ngModel)]="user.password" id="password" name="password" class="form-control">
+        </div>
+        <div class="form-group">
+            <button class="" type="submit" (click)="login()" >Entrar</button>
+        </div>
+        </form>
+    </div>
+    </div>
+</main>
