@@ -1,19 +1,25 @@
-import { isNgTemplate } from '@angular/compiler';
-import { Component, OnInit, Input } from '@angular/core';
+import { Component, OnInit, Output, EventEmitter } from '@angular/core';
 import { Bird } from 'src/app/interfaces/bird';
 import { BirdService } from 'src/app/services/bird.service';
 
+
 @Component({
-  selector: 'app-card',
-  templateUrl: './card.component.html',
-  styleUrls: ['./card.component.css']
+  selector: 'app-select-filter',
+  templateUrl: './select-filter.component.html',
+  styleUrls: ['./select-filter.component.css']
 })
 
-
-export class CardComponent implements OnInit {
-  @Input() filter: Array<any> = [];
-
+export class SelectFilterComponent implements OnInit {
+  @Output() filterSelected = new EventEmitter();
   birds: Bird[] = [];
+  allColors: any = new Set();
+  selected: Array<string> = [];
+
+  filterSelection: object = {
+    color: "",
+    gender: "",
+    size: ""
+  };
 
   birds2: Bird[] = [
     {
@@ -67,39 +73,31 @@ export class CardComponent implements OnInit {
   ]
 
   constructor(private birdService: BirdService) {
-      this.getAllBirds();
+    this.getAllBirds();
   }
 
   ngOnInit(): void {
-    this.filter = ["birdSize", 100];
+    this.getAllBirds();
   }
 
-  getAllBirds(): void { 
-      this.birdService.getAllBirds().subscribe(data => {this.birds = data});
-  }
-  
-  toInteger(str: string) {
-    return Number(str)
+  selectOption(value: string, id: string) {
+    this.selected = [];
+    this.selected.push(id, value);
   }
 
-  toString(n: number) {
-    return String(n)
+  sendFilter() {
+    this.filterSelected.emit(this.selected);
   }
 
-  showDetails(id: number){
-    const birdCard = document.getElementById(`${id}`);
-    const infoButton = document.getElementById(`button${id}`)
-    
-    if (birdCard?.classList.contains("hide_details")){
-      birdCard?.classList.remove("hide_details");
-      if (infoButton != undefined){
-        infoButton.innerHTML = "Menos informações"
-      }
-    }else{
-      birdCard?.classList.add("hide_details");
-      if (infoButton != undefined){
-        infoButton.innerHTML = "Mais informações"
-      }
-    }
+  filterColors(arr: Array<Bird>) {
+    arr.forEach(bird => {
+        this.allColors.add(bird.dominantColor);
+      });
+  }
+
+  getAllBirds() {
+    this.birdService.getAllBirds().subscribe((bird: Bird[]) => {
+      this.birds = bird;
+    });
   }
 }
