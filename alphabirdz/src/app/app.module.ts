@@ -31,6 +31,7 @@ import { SightComponent } from './components/sight/sight.component';
     FooterComponent,
     GuideComponent,
     SelectFilterComponent,
+    SelectFilterComponent,
     SightComponent
   ],
   imports: [
