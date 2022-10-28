@@ -1,5 +1,5 @@
 <main>
-    <div *ngFor="let bird of birds"> <!-- possibilidade de trocar a div por ng-container -->
+    <ng-container *ngFor="let bird of birds"> <!-- possibilidade de trocar a div por ng-container -->
         <div class="card" *ngIf="toInteger(bird[filter[0]]) <= toInteger(filter[1])">
             <div class="card__container--header">
                 <div class="circle" [style.backgroundColor]="bird.dominantColor"></div>
@@ -42,5 +42,5 @@
             <button id="button{{bird.id}}" (click)="showDetails(bird.id)" > Mais informações </button>
             <script src="./card.component.ts"></script>
         </div>
-    </div>
+    </ng-container>
 </main>
