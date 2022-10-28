@@ -101,6 +101,7 @@ main {
     color: #FFFFFF;
     font: var(--font-24-medium);
     cursor: pointer;
+    text-decoration: none;
 }
 
 .addview__button p {
