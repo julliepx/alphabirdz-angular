@@ -1,12 +1,7 @@
 import { NgModule } from '@angular/core';
 import { BrowserModule } from '@angular/platform-browser';
-<<<<<<< HEAD
 import { HttpClientModule } from '@angular/common/http';
 import { FormsModule, ReactiveFormsModule } from '@angular/forms'; // <-- NgModel lives here
-=======
-import { HttpClientModule } from '@angular/common/http'
-import { FormsModule } from '@angular/forms';
->>>>>>> kaltojullie
 
 import { AppRoutingModule } from './app-routing.module';
 import { AppComponent } from './app.component';
@@ -36,19 +31,14 @@ import { SightComponent } from './components/sight/sight.component';
     FooterComponent,
     GuideComponent,
     SelectFilterComponent,
-    SelectFilterComponent,
     SightComponent
   ],
   imports: [
     BrowserModule,
     AppRoutingModule,
     HttpClientModule,
-<<<<<<< HEAD
     FormsModule,
     ReactiveFormsModule
-=======
-    FormsModule
->>>>>>> kaltojullie
   ],
   providers: [BirdService, PostService, UserService],
   bootstrap: [AppComponent]

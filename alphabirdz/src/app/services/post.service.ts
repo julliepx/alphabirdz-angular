@@ -12,4 +12,12 @@ export class PostService {
     getAllPosts(): Observable<Post[]> {
         return this.httpClient.get<Post[]>(`${API_URL}/posts/all`);
     }
+
+    getPostById(id: number): Observable<Post> {
+        return this.httpClient.get<Post>(`${API_URL}/posts/id/${id}`);
+    }
+
+    savePost(post: Post): Observable<Post> {
+        return this.httpClient.post<Post>(`${API_URL}/posts/add`, post);
+    }
 }
