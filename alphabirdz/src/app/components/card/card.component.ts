@@ -15,15 +15,17 @@ export class CardComponent implements OnInit {
 
   birds: Bird[] = [];
 
+  render: boolean = false;
+
   birds2: Bird[] = [
     {
       id: 0,
       image: 'string',
       englishName: 'string',
       latinName: 'string',
-      portugueseName: 'string',
+      portugueseName: '1',
       dominantColor: 'green',
-      gender: 'string',
+      gender: 'female',
       habitat: 'string',
       family: 'string',
       birdSize: '24',
@@ -33,9 +35,9 @@ export class CardComponent implements OnInit {
       image: 'string',
       englishName: 'string',
       latinName: 'string',
-      portugueseName: 'string',
+      portugueseName: '2',
       dominantColor: 'blue',
-      gender: 'string',
+      gender: 'male',
       habitat: 'string',
       family: 'string',
       birdSize: '43',
@@ -45,9 +47,9 @@ export class CardComponent implements OnInit {
       image: 'string',
       englishName: 'string',
       latinName: 'string',
-      portugueseName: 'string',
+      portugueseName: '3',
       dominantColor: 'green',
-      gender: 'string',
+      gender: 'female',
       habitat: 'string',
       family: 'string',
       birdSize: '10',
@@ -57,9 +59,9 @@ export class CardComponent implements OnInit {
       image: 'string',
       englishName: 'string',
       latinName: 'string',
-      portugueseName: 'string',
+      portugueseName: '4',
       dominantColor: 'red',
-      gender: 'string',
+      gender: 'male',
       habitat: 'string',
       family: 'string',
       birdSize: '51',
@@ -71,19 +73,31 @@ export class CardComponent implements OnInit {
   }
 
   ngOnInit(): void {
-    this.filter = ["birdSize", 100];
   }
 
   getAllBirds(): void { 
       this.birdService.getAllBirds().subscribe(data => {this.birds = data});
   }
-  
-  toInteger(str: string) {
-    return Number(str)
-  }
 
-  toString(n: number) {
-    return String(n)
+  filterCars(obj: Array<any>, data: Array<any>): Array<Bird> {
+    let key: string = data[0];
+    let value: string = data[1];
+    let newValue: Array<string> = [];
+
+    if (key == 'birdSize') {
+        return obj.filter((objs) => {
+            newValue = value.split(",")
+            if (Number(objs[key]) >= Number(newValue[0]) && objs[key] <= Number(newValue[1]) ) {
+                return objs;
+            }
+        });
+    } else {
+        return obj.filter((objs) => {
+            if (objs[key] == value) {
+                return objs;
+            }
+        });
+    }
   }
 
   showDetails(id: number){
