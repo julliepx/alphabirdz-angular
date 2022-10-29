@@ -13,7 +13,7 @@
             <input name="date" type="date" placeholder="Data do Avistamento" formControlName="date">
             <label for="user">Usuário</label>
             <select name="user" formControlName="user">
-                <option *ngFor="let user of users" [ngValue]="user">{{ user.username }}</option>
+                <option [ngValue]="users[5]"> administrador </option>
             </select>
             <label for="bird">Pássaro</label>
             <select name="bird" formControlName="bird">
