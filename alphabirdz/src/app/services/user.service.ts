@@ -16,4 +16,12 @@ export class UserService {
     getUserById(id: number): Observable<User> {
         return this.httpClient.get<User>(`${API_URL}/users/id/${id}`);
     }
+
+    saveUser(user: User): Observable<User>{ 
+        return this.httpClient.post<User>(`${API_URL}/users/add`, user);
+    }
+
+//     login(user: User): Observable<User>{
+//         return this.httpClient.post<User>(`${API_URL}/users/login`, user);
+//     }
 }

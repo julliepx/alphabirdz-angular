@@ -11,7 +11,9 @@ const routes: Routes = [
   { path: '', component: LandingPageComponent },
   { path: 'guide', component: GuideComponent },
   { path: 'feed', component: FeedComponent },
-  { path: 'feed/add', component: SightComponent}
+  { path: 'feed/add', component: SightComponent},
+  { path: 'login', component: LoginComponent },
+  { path:'register', component: RegisterComponent },
 ];
 
 @NgModule({
