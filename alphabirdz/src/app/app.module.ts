@@ -1,7 +1,7 @@
 import { NgModule } from '@angular/core';
 import { BrowserModule } from '@angular/platform-browser';
-import { HttpClientModule } from '@angular/common/http'
-import { FormsModule, ReactiveFormsModule } from '@angular/forms';
+import { HttpClientModule } from '@angular/common/http';
+import { FormsModule, ReactiveFormsModule } from '@angular/forms'; // <-- NgModel lives here
 
 import { AppRoutingModule } from './app-routing.module';
 import { AppComponent } from './app.component';
@@ -16,6 +16,7 @@ import { BirdService } from './services/bird.service';
 import { GuideComponent } from './components/guide/guide.component';
 import { LoginComponent } from './components/login/login.component';
 import { RegisterComponent } from './components/register/register.component';
+import { SelectFilterComponent } from './components/select-filter/select-filter.component';
 import { PostService } from './services/post.service';
 import { UserService } from './services/user.service';
 import { SightComponent } from './components/sight/sight.component';
@@ -33,7 +34,9 @@ import { SightComponent } from './components/sight/sight.component';
     GuideComponent,
     SightComponent,
     LoginComponent,
-    RegisterComponent
+    RegisterComponent,
+    SelectFilterComponent,
+    SightComponent
   ],
   imports: [
     BrowserModule,

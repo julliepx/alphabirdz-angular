@@ -1,1 +1,7 @@
-<app-card></app-card>
+<section >
+    <app-select-filter (filterSelected)="reciveData($event)"></app-select-filter>
+</section>
+<section>
+    <app-card [filter]="selectedColor"></app-card>    
+</section>
+

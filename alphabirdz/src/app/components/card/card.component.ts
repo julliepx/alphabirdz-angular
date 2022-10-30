@@ -1,5 +1,5 @@
 import { isNgTemplate } from '@angular/compiler';
-import { Component, OnInit } from '@angular/core';
+import { Component, OnInit, Input } from '@angular/core';
 import { Bird } from 'src/app/interfaces/bird';
 import { BirdService } from 'src/app/services/bird.service';
 
@@ -11,21 +11,95 @@ import { BirdService } from 'src/app/services/bird.service';
 
 
 export class CardComponent implements OnInit {
+  @Input() filter: Array<any> = [];
 
   birds: Bird[] = [];
-  //status: string = 'Mais informações';
-  //isOpen: boolean = false;
+
+  render: boolean = false;
+
+  birds2: Bird[] = [
+    {
+      id: 0,
+      image: 'string',
+      englishName: 'string',
+      latinName: 'string',
+      portugueseName: '1',
+      dominantColor: 'green',
+      gender: 'female',
+      habitat: 'string',
+      family: 'string',
+      birdSize: '24',
+    },
+    {
+      id: 1,
+      image: 'string',
+      englishName: 'string',
+      latinName: 'string',
+      portugueseName: '2',
+      dominantColor: 'blue',
+      gender: 'male',
+      habitat: 'string',
+      family: 'string',
+      birdSize: '43',
+    },
+    {
+      id: 2,
+      image: 'string',
+      englishName: 'string',
+      latinName: 'string',
+      portugueseName: '3',
+      dominantColor: 'green',
+      gender: 'female',
+      habitat: 'string',
+      family: 'string',
+      birdSize: '10',
+    },
+    {
+      id: 3,
+      image: 'string',
+      englishName: 'string',
+      latinName: 'string',
+      portugueseName: '4',
+      dominantColor: 'red',
+      gender: 'male',
+      habitat: 'string',
+      family: 'string',
+      birdSize: '51',
+    }
+  ]
 
   constructor(private birdService: BirdService) {
       this.getAllBirds();
   }
 
-  ngOnInit(): void {}
+  ngOnInit(): void {
+  }
 
   getAllBirds(): void { 
       this.birdService.getAllBirds().subscribe(data => {this.birds = data});
   }
-  
+
+  filterCars(obj: Array<any>, data: Array<any>): Array<Bird> {
+    let key: string = data[0];
+    let value: string = data[1];
+    let newValue: Array<string> = [];
+
+    if (key == 'birdSize') {
+        return obj.filter((objs) => {
+            newValue = value.split(",")
+            if (Number(objs[key]) >= Number(newValue[0]) && objs[key] <= Number(newValue[1]) ) {
+                return objs;
+            }
+        });
+    } else {
+        return obj.filter((objs) => {
+            if (objs[key] == value) {
+                return objs;
+            }
+        });
+    }
+  }
+
   showDetails(id: number){
     const birdCard = document.getElementById(`${id}`);
     const infoButton = document.getElementById(`button${id}`)
