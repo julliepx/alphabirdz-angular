@@ -1,1 +1,25 @@
-<p>sight works!</p>
+<main>
+    <div class="title">
+        <h1>Cadastrar Avistamento</h1>
+    </div>
+    <h4>Escolha as informações do que você avistou.</h4>
+    <form (ngSubmit)="onSubmit()" [formGroup]="sightForm">
+        <div class="form__container">
+            <label for="image">Imagem</label>
+            <input name="image" type="text" placeholder="URL da Imagem" formControlName="image">
+            <label for="location">Local</label>
+            <input name="location" type="text" placeholder="Local do Avistamento" formControlName="location">
+            <label for="date">Local</label>
+            <input name="date" type="date" placeholder="Data do Avistamento" formControlName="date">
+            <label for="user">Usuário</label>
+            <select name="user" formControlName="user">
+                <option [ngValue]="users[5]"> administrador </option>
+            </select>
+            <label for="bird">Pássaro</label>
+            <select name="bird" formControlName="bird">
+                <option *ngFor="let bird of birds" [ngValue]="bird">{{ bird.portugueseName }}</option>
+            </select>
+        </div>
+        <button type="submit">Cadastrar</button>
+    </form>
+</main>

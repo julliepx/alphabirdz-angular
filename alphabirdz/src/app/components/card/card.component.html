@@ -17,6 +17,7 @@
     
                 <img *ngIf="bird.gender == 'male'" src="../../../assets/img/gender_frame.svg" alt="" class="gender">
                 <img *ngIf="bird.gender == 'female'" src="../../../assets/img/gender-female.svg" alt="" class="gender">
+                <img *ngIf="bird.gender == ''" src="../../../assets/img/gender-young.svg" alt="" class="gender">
             </div>
     
             <div class="hide_details card_container--details" id="{{bird.id}}">
