@@ -1,0 +1,37 @@
+<main class="menu__list menu">
+    <div class="header__login">
+        <h2>Cadastre-se</h2>
+        <div class="header__icons">
+            <img src="../../../assets/img/facebook-svgrepo-com (1) 1.svg" alt="">
+            <img src="../../../assets/img/Group (1).svg" alt="">
+            <img src="../../../assets/img/Group.svg" alt="">
+        </div>
+        <p>ou use seu e-mail para logar</p>
+    </div>
+    <div class="form-email">
+        <form [formGroup]="registerForm" (ngSubmit)="onSubmit()" #formDir="ngForm">
+            <div class="form-group">
+                <img class="icon_login" src="../../../assets/img/envelope 1.svg" alt="">
+                <input placeholder="E-mail" type="email" formControlName="email"  id="email" name="login" class="form-control" required>
+            </div>
+            <div class="form-group">
+                <img class="icon_login" src="../../../assets/img/envelope 1.svg" alt="">
+                <input placeholder="Username" type="username" formControlName="username"  id="username" name="username" class="form-control" required>
+            </div>
+            <div class="form-group">
+                <img class="icon_password" src="../../../assets/img/lock-key 1.svg" alt="">
+                <input placeholder="Senha" type="password" formControlName="password" id="password" name="password" class="form-control" required>
+            </div>
+            <div class="form-group">
+                <img class="icon_login" src="../../../assets/img/envelope 1.svg" alt="">
+                <input placeholder="Foto de perfil" type="profilePhoto" formControlName="profilePhoto"  id="profilePhoto" name="profilePhoto" class="form-control">
+            </div>
+            <div class="form-button">
+                <button class="submit__button" type="submit">Entrar</button>
+            </div>
+        </form>
+        <div class="login__footer">
+            <p>Já possui uma conta? Efetue o <a [routerLink]="['/register']">login</a>!</p>
+        </div>
+    </div>
+</main>
