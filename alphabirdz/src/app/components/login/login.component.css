@@ -24,7 +24,7 @@
     margin-top: 5px;
 }
 
-.header__login p, .login__footer p {
+.header__login p, .login__footer p, a {
     color: #919191;
     margin-top: 5px;
     text-align: center;
