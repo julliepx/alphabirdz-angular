@@ -14,6 +14,8 @@ import { FeedComponent } from './components/feed/feed.component';
 import { FooterComponent } from './components/footer/footer.component';
 import { BirdService } from './services/bird.service';
 import { GuideComponent } from './components/guide/guide.component';
+import { LoginComponent } from './components/login/login.component';
+import { RegisterComponent } from './components/register/register.component';
 import { SelectFilterComponent } from './components/select-filter/select-filter.component';
 import { PostService } from './services/post.service';
 import { UserService } from './services/user.service';
@@ -30,6 +32,9 @@ import { SightComponent } from './components/sight/sight.component';
     FeedComponent,
     FooterComponent,
     GuideComponent,
+    SightComponent,
+    LoginComponent,
+    RegisterComponent,
     SelectFilterComponent,
     SightComponent
   ],

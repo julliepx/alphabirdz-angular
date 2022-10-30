@@ -4,12 +4,16 @@ import { LandingPageComponent } from './components/landing-page/landing-page.com
 import { GuideComponent } from './components/guide/guide.component';
 import { FeedComponent } from './components/feed/feed.component';
 import { SightComponent } from './components/sight/sight.component';
+import { LoginComponent } from './components/login/login.component';
+import { RegisterComponent } from './components/register/register.component';
 
 const routes: Routes = [
   { path: '', component: LandingPageComponent },
   { path: 'guide', component: GuideComponent },
   { path: 'feed', component: FeedComponent },
-  { path: 'feed/add', component: SightComponent}
+  { path: 'feed/add', component: SightComponent},
+  { path: 'login', component: LoginComponent },
+  { path:'register', component: RegisterComponent },
 ];
 
 @NgModule({
