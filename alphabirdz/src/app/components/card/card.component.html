@@ -1,5 +1,5 @@
 <main>
-    <ng-container *ngFor="let bird of filterCars(birds, filter)">
+    <ng-container *ngFor="let bird of filterCars(birds2, filter)">
         <div class="card">
             <div class="card__container--header">
                 <div class="circle" [style.backgroundColor]="bird.dominantColor"></div>
@@ -10,7 +10,7 @@
             </div>
             <div class="card_container--footer">
                 <div class="habitat">
-                    <h4>Habitat</h4>
+                    <h3>Habitat</h3>
                     <p *ngIf="bird.habitat != null"> {{ bird.habitat }} </p>
                     <p *ngIf="bird.habitat == ''"> Não informado </p>
                 </div>
@@ -22,21 +22,21 @@
     
             <div class="hide_details card_container--details" id="{{bird.id}}">
                 <div>
-                    <h4> Nome em latim </h4>
+                    <h3> Nome em latim </h3>
                     <p> {{bird.latinName}} </p>
                 </div>
     
                 <div>
-                    <h4> Nome em Inglês</h4>
+                    <h3> Nome em Inglês</h3>
                     <p> {{bird.englishName }} </p>
                 </div>
                 <div>
-                    <h4> Família </h4>
+                    <h3> Família </h3>
                     <p> {{bird.family}} </p>
                 </div>
     
                 <div>
-                    <h4> Tamanho </h4>
+                    <h3> Tamanho </h3>
                     <p> {{bird.birdSize}}cm </p>
                 </div>
             </div>

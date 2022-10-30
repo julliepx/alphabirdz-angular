@@ -47,6 +47,7 @@ option {
     width: 100%;
     background-color: var(--verde-escuro-90);
     color: var(--verde-claro-10);
+    font: var(--font-16-medium);
 }
 
 .container::-webkit-scrollbar {

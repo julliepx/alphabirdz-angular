@@ -80,8 +80,8 @@ button {
     font-size: var(--font-16-normal);
 }
 
-.card_container--details h4, 
-.card_container--footer h4 {
+.card_container--details h3, 
+.card_container--footer h3 {
     font: var(--font-24-medium);
     color: var(--verde-escuro-90);
 }
@@ -122,7 +122,7 @@ p {
         margin: 16px 8px 16px 16px;
     }
 
-    .habitat h4{
+    .habitat h3{
         font: var(--font-32-medium);
     }
     
