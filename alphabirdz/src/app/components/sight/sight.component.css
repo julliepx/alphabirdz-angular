@@ -55,6 +55,7 @@ main {
     border-radius: 12px;
     padding: 0.5rem 1rem;
     margin: 8px;
+    cursor: pointer;
 }
 
 .form__container--fields {
@@ -77,21 +78,30 @@ main {
     background-color: #E4E4E4;
     font: var(--font-16-medium);
     color: var(--verde-escuro-90);
-    text-align: center;
+    text-align: left;
+    border-radius: 0.875rem;
+    border: none;
+}
+
+.form__container--fields select {
+    cursor: pointer;
+    padding-left: 36px;
+}
+
+.form__input::placeholder {
+    width: 100%;
+    height: 36px;
+    background-color: #E4E4E4;
+    font: var(--font-16-medium);
+    color: var(--verde-escuro-90);
+    text-align: left;
+    padding-left: 36px;
     border-radius: 0.875rem;
     border: none;
 }
 
 .form__input:focus::placeholder {
     opacity: 0;
-}
-
-.form__container--fields select {
-    cursor: pointer;
-}
-
-.form__input::placeholder {
-    color: var(--verde-escuro-90);
 }
 
 .form__container--fields input[type="date"]::-webkit-calendar-picker-indicator {
