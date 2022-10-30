@@ -4,7 +4,106 @@
     box-sizing: border-box;
 }
 
-h1 {
+main {
+    display: flex;
+    flex-direction: column;
+    height: 100vh;
+}
+
+.title h1{
+    display: flex;
+    justify-content: center;
     font: var(--font-48-medium);
     color: var(--verde-escuro-90);
+    text-align: center;
+    margin-top: 16px;
+}
+
+.title h2{
+    display: flex;
+    font: var(--font-16-medium);
+    color: #919191;
+    justify-content: center;
+}
+
+.form {
+    display: flex;
+    flex-direction: column;
+    align-items: center;
+}
+
+.form__container {
+    min-width: 130px;
+    border-radius: 0.875rem;
+    display: flex;
+    flex-direction: column;
+    align-items: left;
+    padding: .5rem 1rem;
+}
+
+.form__container option{
+    font: var(--font-16-normal);
+    color: var(--verde-claro-10);
+    background-color: var(--verde-escuro-90);
+}
+
+.submit__button {
+    background-color: var(--verde-escuro-90);
+    color: var(--verde-claro-10);
+    font: var(--font-16-medium);
+    border: none;
+    border-radius: 12px;
+    padding: 0.5rem 1rem;
+    margin: 8px;
+    cursor: pointer;
+}
+
+.form__container--fields {
+    display: flex;
+    flex-direction: row;
+    gap: 16px;
+    margin: 16px;
+}
+
+.form__container--fields img {
+    width: 25px;
+    display: flex;
+    position: absolute;
+    margin: 6px;
+}
+
+.form__container--fields input, select {
+    width: 100%;
+    height: 36px;
+    background-color: #E4E4E4;
+    font: var(--font-16-medium);
+    color: var(--verde-escuro-90);
+    text-align: left;
+    border-radius: 0.875rem;
+    border: none;
+}
+
+.form__container--fields select {
+    cursor: pointer;
+    padding-left: 36px;
+}
+
+.form__input::placeholder {
+    width: 100%;
+    height: 36px;
+    background-color: #E4E4E4;
+    font: var(--font-16-medium);
+    color: var(--verde-escuro-90);
+    text-align: left;
+    padding-left: 36px;
+    border-radius: 0.875rem;
+    border: none;
+}
+
+.form__input:focus::placeholder {
+    opacity: 0;
+}
+
+.form__container--fields input[type="date"]::-webkit-calendar-picker-indicator {
+    opacity: 0;
 }

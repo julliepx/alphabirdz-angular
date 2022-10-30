@@ -1,25 +1,37 @@
 <main>
     <div class="title">
         <h1>Cadastrar Avistamento</h1>
+        <h2>Escolha as informações do que você avistou.</h2>
     </div>
-    <h4>Escolha as informações do que você avistou.</h4>
-    <form (ngSubmit)="onSubmit()" [formGroup]="sightForm">
+    <form class="form" (ngSubmit)="onSubmit()" [formGroup]="sightForm">
         <div class="form__container">
-            <label for="image">Imagem</label>
-            <input name="image" type="text" placeholder="URL da Imagem" formControlName="image">
-            <label for="location">Local</label>
-            <input name="location" type="text" placeholder="Local do Avistamento" formControlName="location">
-            <label for="date">Local</label>
-            <input name="date" type="date" placeholder="Data do Avistamento" formControlName="date">
-            <label for="user">Usuário</label>
-            <select name="user" formControlName="user">
-                <option [ngValue]="users[5]"> administrador </option>
-            </select>
-            <label for="bird">Pássaro</label>
-            <select name="bird" formControlName="bird">
-                <option *ngFor="let bird of birds" [ngValue]="bird">{{ bird.portugueseName }}</option>
-            </select>
+            <div class="form__container--fields">
+                <img src="../../../assets/img/imageiconmini.svg" alt="Image Icon">
+                <input class="form__input" type="text" placeholder="URL da Imagem" formControlName="image">
+            </div>
+            <div class="form__container--fields">
+                <img src="../../../assets/img/mapiconmini.svg" alt="Map Icon">
+                <input class="form__input" type="text" placeholder="Local do Avistamento" formControlName="location">
+            </div>
+            <div class="form__container--fields">
+                <img src="../../../assets/img/calendariconmini.svg" alt="Date Icon">
+                <input class="form__input" type="text" placeholder="Data do Avistamento" onfocus="(this.type='date')" formControlName="date">
+            </div>
+            <div class="form__container--fields">
+                <img src="../../../assets/img/usericonmini.svg" alt="User Icon">
+                <select class="form__select" formGroupName="user">
+                    <option selected> Usuário </option>
+                    <option [ngValue]="users[5]" [selected]=""> Administrador </option>
+                </select>
+            </div>
+            <div class="form__container--fields">
+                <img src="../../../assets/img/birdiconmini.svg" alt="Bird Icon">
+                <select class="form__select" formGroupName="bird">
+                    <option selected> Pássaro </option>
+                    <option *ngFor="let bird of birds" [ngValue]="bird">{{ bird.portugueseName | titlecase }}</option>
+                </select>
+            </div>
         </div>
-        <button type="submit">Cadastrar</button>
+        <button class="submit__button" type="submit">Cadastrar</button>
     </form>
 </main>
