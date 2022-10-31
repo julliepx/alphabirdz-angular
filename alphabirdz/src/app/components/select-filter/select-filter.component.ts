@@ -10,67 +10,11 @@ import { BirdService } from 'src/app/services/bird.service';
 })
 
 export class SelectFilterComponent implements OnInit {
-  @Output() filterSelected = new EventEmitter();
+  @Output() emitter = new EventEmitter();
+  
   birds: Bird[] = [];
   allColors: any = new Set();
   selected: Array<string> = [];
-
-  filterSelection: object = {
-    color: "",
-    gender: "",
-    size: ""
-  };
-
-  birds2: Bird[] = [
-    {
-      id: 0,
-      image: 'string',
-      englishName: 'string',
-      latinName: 'string',
-      portugueseName: 'string',
-      dominantColor: 'green',
-      gender: 'string',
-      habitat: 'string',
-      family: 'string',
-      birdSize: '24',
-    },
-    {
-      id: 1,
-      image: 'string',
-      englishName: 'string',
-      latinName: 'string',
-      portugueseName: 'string',
-      dominantColor: 'blue',
-      gender: 'string',
-      habitat: 'string',
-      family: 'string',
-      birdSize: '43',
-    },
-    {
-      id: 2,
-      image: 'string',
-      englishName: 'string',
-      latinName: 'string',
-      portugueseName: 'string',
-      dominantColor: 'green',
-      gender: 'string',
-      habitat: 'string',
-      family: 'string',
-      birdSize: '10',
-    },
-    {
-      id: 3,
-      image: 'string',
-      englishName: 'string',
-      latinName: 'string',
-      portugueseName: 'string',
-      dominantColor: 'red',
-      gender: 'string',
-      habitat: 'string',
-      family: 'string',
-      birdSize: '51',
-    }
-  ]
 
   constructor(private birdService: BirdService) {
     this.getAllBirds();
@@ -85,11 +29,11 @@ export class SelectFilterComponent implements OnInit {
     this.selected.push(id, value);
   }
 
-  sendFilter() {
-    this.filterSelected.emit(this.selected);
+  sendEmitter() {
+    this.emitter.emit(this.selected);
   }
 
-  filterColors(arr: Array<Bird>) {
+  renderFilterColor(arr: Array<Bird>) {
     arr.forEach(bird => {
         this.allColors.add(bird.dominantColor);
       });
@@ -101,3 +45,54 @@ export class SelectFilterComponent implements OnInit {
     });
   }
 }
+
+// birdsTest: Bird[] = [
+//   {
+//     id: 0,
+//     image: 'string',
+//     englishName: 'string',
+//     latinName: 'string',
+//     portugueseName: 'string',
+//     dominantColor: 'green',
+//     gender: 'string',
+//     habitat: 'string',
+//     family: 'string',
+//     birdSize: '24',
+//   },
+//   {
+//     id: 1,
+//     image: 'string',
+//     englishName: 'string',
+//     latinName: 'string',
+//     portugueseName: 'string',
+//     dominantColor: 'blue',
+//     gender: 'string',
+//     habitat: 'string',
+//     family: 'string',
+//     birdSize: '43',
+//   },
+//   {
+//     id: 2,
+//     image: 'string',
+//     englishName: 'string',
+//     latinName: 'string',
+//     portugueseName: 'string',
+//     dominantColor: 'green',
+//     gender: 'string',
+//     habitat: 'string',
+//     family: 'string',
+//     birdSize: '10',
+//   },
+//   {
+//     id: 3,
+//     image: 'string',
+//     englishName: 'string',
+//     latinName: 'string',
+//     portugueseName: 'string',
+//     dominantColor: 'red',
+//     gender: 'string',
+//     habitat: 'string',
+//     family: 'string',
+//     birdSize: '51',
+//   }
+// ]

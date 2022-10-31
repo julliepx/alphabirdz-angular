@@ -1,7 +1,7 @@
 <section >
-    <app-select-filter (filterSelected)="reciveData($event)"></app-select-filter>
+    <app-select-filter (emitter)="receiveData($event)"></app-select-filter>
 </section>
 <section>
-    <app-card [filter]="selectedColor"></app-card>    
+    <app-card [filter]="selected"></app-card>    
 </section>
 
