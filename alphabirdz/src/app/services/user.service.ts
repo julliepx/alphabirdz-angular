@@ -21,7 +21,10 @@ export class UserService {
         return this.httpClient.post<User>(`${API_URL}/users/add`, user);
     }
 
-//     login(user: User): Observable<User>{
-//         return this.httpClient.post<User>(`${API_URL}/users/login`, user);
-//     }
+    login(user: User): Observable<User>{
+        let check = this.httpClient.post<User>(`${API_URL}/users/login`, user);
+        console.log(check);
+        return check
+    }
+
 }

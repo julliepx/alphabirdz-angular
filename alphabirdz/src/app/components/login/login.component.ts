@@ -11,6 +11,8 @@ import { UserService } from 'src/app/services/user.service';
 export class LoginComponent implements OnInit {
   loginForm!: FormGroup;
   user!: User;
+  isLogged: boolean = false;
+  
 
   constructor(private userService: UserService) { 
 
@@ -25,9 +27,7 @@ export class LoginComponent implements OnInit {
 
 
   public onSubmit(): void {
-
-    //this.userService.login(this.loginForm.value).subscribe(data => {this.user = data; console.log(data)})
-    
+    this.userService.login(this.loginForm.value).subscribe(data => {this.user = data})
   }
 
 }
