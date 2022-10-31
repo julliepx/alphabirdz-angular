@@ -1,8 +1,8 @@
 <section class="container">
     <div class="filter">
         <select (change)="selectOption($any($event.target).value, $any($event.target).id)"
-                (change)="sendFilter()"
-                (mousemove)="filterColors(birds)"
+                (change)="sendEmitter()"
+                (mousemove)="renderFilterColor(birds)"
                 id="dominantColor"
                 class="container__filter">
             <option value="">color</option>
@@ -12,21 +12,22 @@
 
     <div class="filter">
         <select (change)="selectOption($any($event.target).value, $any($event.target).id)"
-                (change)="sendFilter()"
+                (change)="sendEmitter()"
                 id="gender"
                 class="container__filter">
             <option value="">Gênero</option>
             <option value="male">Macho</option>
             <option value="female">Fêmea</option>
+            <option value="young">Jovem</option>
         </select>
     </div>
 
     <div class="filter">
         <select (change)="selectOption($any($event.target).value, $any($event.target).id)"
-                (change)="sendFilter()"
+                (change)="sendEmitter()"
                 id="birdSize"
                 class="container__filter">
-            <option value="">Tamanho</option>
+            <option value="0,100">Tamanho</option>
             <option value="0,10">0cm a 10cm</option>
             <option value="11,20">11cm a 20cm</option>
             <option value="21,30">21cm a 30cm</option>
