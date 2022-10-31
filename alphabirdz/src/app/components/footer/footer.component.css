@@ -18,7 +18,10 @@
 }
 
 .footer__text {
-
     font: var(--font-16-medium);
-    color: var(--verde-claro-10);
+    color: var(--preto-90);
+}
+
+.footer__text::before {
+    content: "-";
 }
