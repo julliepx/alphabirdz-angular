@@ -11,13 +11,12 @@ import { BirdService } from 'src/app/services/bird.service';
 
 export class SelectFilterComponent implements OnInit {
   @Output() emitter = new EventEmitter();
-  
-  birds: Bird[] = [];
+
   allColors: any = new Set();
   selected: Array<string> = [];
+  birds: Bird[] = [];
 
   constructor(private birdService: BirdService) {
-    this.getAllBirds();
   }
 
   ngOnInit(): void {
