@@ -4,6 +4,7 @@ import { Observable } from 'rxjs';
 import { User } from '../interfaces/user';
 import { API_URL } from 'src/environments/environment';
 
+
 @Injectable()
 export class UserService {
 
@@ -22,9 +23,7 @@ export class UserService {
     }
 
     login(user: User): Observable<User>{
-        let check = this.httpClient.post<User>(`${API_URL}/users/login`, user);
-        console.log(check);
-        return check
+        return this.httpClient.post<User>(`${API_URL}/users/login`, user);
     }
 
 }
