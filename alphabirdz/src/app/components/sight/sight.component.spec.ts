@@ -1,4 +1,6 @@
+import { HttpClient, HttpHandler } from '@angular/common/http';
 import { ComponentFixture, TestBed } from '@angular/core/testing';
+import { PostService } from 'src/app/services/post.service';
 
 import { SightComponent } from './sight.component';
 
@@ -8,7 +10,8 @@ describe('SightComponent', () => {
 
   beforeEach(async () => {
     await TestBed.configureTestingModule({
-      declarations: [ SightComponent ]
+      declarations: [ SightComponent ],
+      providers: [PostService, HttpClient, HttpHandler]
     })
     .compileComponents();
 
