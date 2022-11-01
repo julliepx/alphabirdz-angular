@@ -6,7 +6,7 @@ import { UserService } from 'src/app/services/user.service';
 import { RegisterComponent } from '../register/register.component';
 import { LoginComponent } from './login.component';
 
-describe('LoginComponent', () => {
+fdescribe('LoginComponent', () => {
   let component: LoginComponent;
   let fixture: ComponentFixture<LoginComponent>;
 
@@ -28,9 +28,27 @@ describe('LoginComponent', () => {
   });
 
   it('should redirect to registerPage when user click on "cadastre-se" button', () => {
-    const registerComponent = TestBed.createComponent(RegisterComponent);
-    const registerButton = fixture.debugElement.nativeElement.querySelector('button');
-    registerButton.click();
-    expect(registerComponent).toBeTruthy();
+    //fixture.detectChanges();
+    //const registerButton = fixture.debugElement.nativeElement.querySelector('a');
+    //registerButton.click();
+    const registerTitle = TestBed.createComponent(RegisterComponent).debugElement.nativeElement.querySelector('.header__title').innerHTML;
+    expect(registerTitle).toContain('Cadastre-se');
   })
-});
+
+  it('should not be a valid form user do not fill email and password', () => {
+    fixture.detectChanges();
+    component.loginForm.controls['email'].setValue('');
+    component.loginForm.controls['password'].setValue('');
+
+    expect(component.loginForm.valid).toBeFalsy();
+  })
+
+  it('should be a valid form user fill email and password', () => {
+    fixture.detectChanges();
+    component.loginForm.controls['email'].setValue('example@example.com');
+    component.loginForm.controls['password'].setValue('password');
+
+    expect(component.loginForm.valid).toBeTruthy();
+  })
+
+})

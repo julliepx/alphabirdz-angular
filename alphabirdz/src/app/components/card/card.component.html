@@ -22,25 +22,25 @@
     
             <div class="hide_details card_container--details" id="{{bird.id}}">
                 <div>
-                    <h3> Nome em latim </h3>
+                    <h3 id="latin__name"> Nome em latim </h3>
                     <p> {{bird.latinName}} </p>
                 </div>
     
                 <div>
-                    <h3> Nome em Inglês</h3>
+                    <h3 id="english__name"> Nome em Inglês</h3>
                     <p> {{bird.englishName }} </p>
                 </div>
                 <div>
-                    <h3> Família </h3>
+                    <h3 id="family"> Família </h3>
                     <p> {{bird.family}} </p>
                 </div>
     
                 <div>
-                    <h3> Tamanho </h3>
+                    <h3 id="bird__size"> Tamanho </h3>
                     <p> {{bird.birdSize}}cm </p>
                 </div>
             </div>
-            <button id="button{{bird.id}}" (click)="showDetails(bird.id)" > Mais informações </button>
+            <button class="details__button" id="button{{bird.id}}" (click)="showDetails(bird.id)" > Mais informações </button>
             <script src="./card.component.ts"></script>
         </div>
     </ng-container>

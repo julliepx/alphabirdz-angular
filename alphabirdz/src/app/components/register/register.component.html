@@ -1,6 +1,6 @@
 <main class="login__page">
     <div class="header__login">
-        <h2>Cadastre-se</h2>
+        <h2 class="header__title">Cadastre-se</h2>
         <div class="header__icons">
             <img src="../../../assets/img/google_phosphor_icon.svg" alt="">
             <img src="../../../assets/img/linkedin_phosphor_icon.svg" alt="">
@@ -9,7 +9,7 @@
         <p>ou use seu e-mail para logar</p>
     </div>
     <div class="form">
-        <form class="form__container" [formGroup]="registerForm" (ngSubmit)="onSubmit()" #formDir="ngForm">
+        <form class="form__container" [formGroup]="registerForm" (ngSubmit)="onSubmit()">
             <div class="form-group">
                 <img class="icon_login" src="../../../assets/img/mail_phosphor_icons.svg" alt="">
                 <input placeholder="E-mail" type="email" formControlName="email"  id="email" name="login" class="form-control" required>
