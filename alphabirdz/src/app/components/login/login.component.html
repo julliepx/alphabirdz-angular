@@ -9,14 +9,14 @@
         <p>ou use seu e-mail para logar</p>
     </div>
     <div class="form-email">
-        <form class="form" [formGroup]="loginForm" (ngSubmit)="onSubmit()" #formDir="ngForm">
+        <form class="form" [formGroup]="loginForm" (ngSubmit)="onSubmit()">
             <div class="form-group">
                 <img class="icon_login" src="../../../assets/img/envelope 1.svg" alt="">
-                <input placeholder="E-mail" type="email" formControlName="email"  id="email" name="email" class="form-control" required>
+                <input placeholder="E-mail" type="email" formControlName="email"  id="email" name="email" class="form-control">
             </div>
             <div class="form-group">
                 <img class="icon_password" src="../../../assets/img/lock-key 1.svg" alt="">
-                <input placeholder="Senha" type="password" formControlName="password" id="password" name="password" class="form-control" required>
+                <input placeholder="Senha" type="password" formControlName="password" id="password" name="password" class="form-control">
             </div>
             <div class="form-button">
                 <button class="submit__button" type="submit" >Entrar</button>

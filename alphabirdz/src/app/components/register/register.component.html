@@ -9,7 +9,7 @@
         <p>ou use seu e-mail para logar</p>
     </div>
     <div class="form-email">
-        <form [formGroup]="registerForm" (ngSubmit)="onSubmit()" #formDir="ngForm">
+        <form [formGroup]="registerForm" (ngSubmit)="onSubmit()">
             <div class="form-group">
                 <img class="icon_login" src="../../../assets/img/envelope 1.svg" alt="">
                 <input placeholder="E-mail" type="email" formControlName="email"  id="email" name="login" class="form-control" required>
