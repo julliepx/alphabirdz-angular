@@ -181,9 +181,9 @@ describe('SelectFilterComponent', () => {
 
     const req = httpController.match('http://localhost:8080/birds/all');
     console.log(req)
-    expect(req[0].request.method).toBe('GET');
+    expect(req[0].request.method).toBe('GET'); // request feita pelo guide q tambem conta na pagina
     req[0].flush(birds);
-    expect(req[1].request.method).toBe('GET');
+    expect(req[1].request.method).toBe('GET'); // request do component filter
     req[1].flush(birds);
 
     component.renderFilterColor(birds);
@@ -193,54 +193,3 @@ describe('SelectFilterComponent', () => {
     console.log(filterColor)
   });
 });
-
-// bird = [
-//   {
-//     id: 0,
-//     image: 'https://cdn.discordapp.com/attachments/1033991589342740510/1033991694951133194/unknown.png',
-//     englishName: 'great egret',
-//     latinName: 'ardea alba',
-//     portugueseName: 'garça-branca-grande',
-//     dominantColor: 'white',
-//     gender: '',
-//     habitat: 'wetlands',
-//     family: 'ardeidae',
-//     birdSize: '65',
-//   },
-//   {
-//     id: 1,
-//     image: 'https://cdn.discordapp.com/attachments/1033991589342740510/1033994905145577522/unknown.png',
-//     englishName: 'black-necked swan',
-//     latinName: 'cygnus melancoryphus',
-//     portugueseName: 'cisne-de-pescoço-preto',
-//     dominantColor: 'white',
-//     gender: 'male',
-//     habitat: '',
-//     family: 'anatidae',
-//     birdSize: '80',
-//   },
-//   {
-//     id: 2,
-//     image: 'https://cdn.discordapp.com/attachments/1033991589342740510/1034003036294623232/unknown.png',
-//     englishName: 'glittering-bellied emerald',
-//     latinName: 'chlorostilbon lucidus',
-//     portugueseName: 'besourinho-de-bico-vermelho',
-//     dominantColor: 'green',
-//     gender: 'male',
-//     habitat: 'campo com árvores',
-//     family: 'trochilidae',
-//     birdSize: '7',
-//   },
-//   {
-//     id: 3,
-//     image: 'https://cdn.discordapp.com/attachments/1033991589342740510/1033998366620794900/unknown.png',
-//     englishName: 'sienna-and-yellow marshbird',
-//     latinName: 'pseudoleistes virescens',
-//     portugueseName: 'dragão',
-//     dominantColor: 'black',
-//     gender: 'female',
-//     habitat: 'campo com árvores',
-//     family: 'icteridae',
-//     birdSize: '21',
-//   }
-// ]

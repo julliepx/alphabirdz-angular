@@ -30,10 +30,8 @@ export class LoginComponent implements OnInit {
 
   public login(onSubmit) {
     if (onSubmit == StatusCodes.OK){
-      console.log("yeahyeah")
     } else if (onSubmit == StatusCodes.BAD_REQUEST){
       console.log(this.errorMessage)
-      console.log("NotYeahYeah")
     }
   }
 
