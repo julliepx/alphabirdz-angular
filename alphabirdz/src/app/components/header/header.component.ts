@@ -1,4 +1,4 @@
-import { Component, OnInit } from '@angular/core';
+import { Component, OnInit, Output } from '@angular/core';
 import { BreakpointObserver, BreakpointState } from '@angular/cdk/layout';
 
 @Component({
@@ -30,7 +30,7 @@ export class HeaderComponent implements OnInit {
     if (this.userOpen) this.userOpen = false
   }
 
-  openUser() {
+  @Output() openUser() {
     this.userOpen = !this.userOpen;
     if (this.menuOpen) this.menuOpen = false
   }

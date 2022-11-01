@@ -6,19 +6,34 @@
     box-sizing: border-box;
 }
 
+textarea:focus, input:focus, select:focus {
+    box-shadow: 0 0 0 0;
+    border: 0 none;
+    outline: 0;
+} 
+
+body {
+    background-color: var(--branco-90)
+}
+
 :root {
-    --verde-escuro-90: #007A68;
+    --verde-escuro-90: #006354;
     --verde-claro-10: #CFF1EC;
     --verde-claro-90: #00C7A9;
+    --preto-90: #272E2D;
+    --branco-90: #F5F5F5;
+    --input-background: #E4E4E4;
+    --placeholder: #696969;
     --drop-shadow: 0px 0px 15px 3px rgba(0, 0, 0, 0.25);
     --drop-shadow-desktop: 0px 0px 15px 3px rgba(0, 0, 0, 0.25);
     --font-64-medium: 500 4rem 'Roboto Flex', arial;
     --font-64-normal: 400 4rem 'Roboto Flex', arial;
-    --font-48-medium: 500 2.5rem 'Roboto Flex', arial;
+    --font-48-medium: 500 3rem 'Roboto Flex', arial;
     --font-32-medium: 500 2rem 'Roboto Flex', arial;
     --font-32-normal: 400 2rem 'Roboto Flex', arial;
     --font-24-medium: 500 1.5rem 'Roboto Flex', arial;
     --font-24-normal: 400 1.5rem 'Roboto Flex', arial;
+    --font-16-bold: bold 1rem 'Roboto Flex', arial;
     --font-16-medium: 500 1rem 'Roboto Flex', arial;
     --font-16-normal: 400 1rem 'Roboto Flex', arial;
 }

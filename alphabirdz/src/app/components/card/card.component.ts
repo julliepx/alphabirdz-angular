@@ -15,71 +15,17 @@ export class CardComponent implements OnInit {
 
   birds: Bird[] = [];
 
-  render: boolean = false;
-
-  birds2: Bird[] = [
-    {
-      id: 0,
-      image: 'string',
-      englishName: 'string',
-      latinName: 'string',
-      portugueseName: '1',
-      dominantColor: 'green',
-      gender: 'female',
-      habitat: 'string',
-      family: 'string',
-      birdSize: '24',
-    },
-    {
-      id: 1,
-      image: 'string',
-      englishName: 'string',
-      latinName: 'string',
-      portugueseName: '2',
-      dominantColor: 'blue',
-      gender: 'male',
-      habitat: 'string',
-      family: 'string',
-      birdSize: '43',
-    },
-    {
-      id: 2,
-      image: 'string',
-      englishName: 'string',
-      latinName: 'string',
-      portugueseName: '3',
-      dominantColor: 'green',
-      gender: 'female',
-      habitat: 'string',
-      family: 'string',
-      birdSize: '10',
-    },
-    {
-      id: 3,
-      image: 'string',
-      englishName: 'string',
-      latinName: 'string',
-      portugueseName: '4',
-      dominantColor: 'red',
-      gender: 'male',
-      habitat: 'string',
-      family: 'string',
-      birdSize: '51',
-    }
-  ]
-
   constructor(private birdService: BirdService) {
       this.getAllBirds();
   }
 
-  ngOnInit(): void {
-  }
+  ngOnInit(): void { /* TODO document why this method 'ngOnInit' is empty */  }
 
   getAllBirds(): void { 
       this.birdService.getAllBirds().subscribe(data => {this.birds = data});
   }
 
-  filterCars(obj: Array<any>, data: Array<any>): Array<Bird> {
+  filterCards(obj: Array<any>, data: Array<any>): Array<Bird> {
     let key: string = data[0];
     let value: string = data[1];
     let newValue: Array<string> = [];
@@ -117,3 +63,54 @@ export class CardComponent implements OnInit {
     }
   }
 }
+
+// birdsTest: Bird[] = [
+//   {
+//     id: 0,
+//     image: 'string',
+//     englishName: 'string',
+//     latinName: 'string',
+//     portugueseName: '1',
+//     dominantColor: 'green',
+//     gender: 'female',
+//     habitat: 'string',
+//     family: 'string',
+//     birdSize: '24',
+//   },
+//   {
+//     id: 1,
+//     image: 'string',
+//     englishName: 'string',
+//     latinName: 'string',
+//     portugueseName: '2',
+//     dominantColor: 'blue',
+//     gender: 'male',
+//     habitat: 'string',
+//     family: 'string',
+//     birdSize: '43',
+//   },
+//   {
+//     id: 2,
+//     image: 'string',
+//     englishName: 'string',
+//     latinName: 'string',
+//     portugueseName: '3',
+//     dominantColor: 'green',
+//     gender: 'female',
+//     habitat: 'string',
+//     family: 'string',
+//     birdSize: '10',
+//   },
+//   {
+//     id: 3,
+//     image: 'string',
+//     englishName: 'string',
+//     latinName: 'string',
+//     portugueseName: '4',
+//     dominantColor: 'red',
+//     gender: 'male',
+//     habitat: 'string',
+//     family: 'string',
+//     birdSize: '51',
+//   }
+// ]

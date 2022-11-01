@@ -6,14 +6,13 @@ import { Component, OnInit, Input } from '@angular/core';
   styleUrls: ['./guide.component.css']
 })
 export class GuideComponent implements OnInit {
-  selectedColor: Array<string> = [];
   @Input() filterSelected2: string[] = [];
 
-  ngOnInit(): void {
-    
-  }
+  selected: Array<string> = [];
 
-  reciveData(event: Array<string>) {
-    this.selectedColor = event;
+  ngOnInit(): void { /* TODO document why this method 'ngOnInit' is empty */  }
+
+  receiveData(event: Array<string>) {
+    this.selected = event;
   }
 }

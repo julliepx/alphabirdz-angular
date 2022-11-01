@@ -1,35 +1,31 @@
-* {
-    margin: 0;
-    padding: 0;
-    box-sizing: border-box;
-}
-
 main {
     display: flex;
     flex-direction: column;
     height: 100vh;
 }
 
-.title h1{
-    display: flex;
-    justify-content: center;
-    font: var(--font-48-medium);
-    color: var(--verde-escuro-90);
-    text-align: center;
-    margin-top: 16px;
+.title {
+    margin: 1rem;
 }
 
 .title h2{
-    display: flex;
+    text-align: center;
+    font: var(--font-32-medium);
+    color: var(--verde-escuro-90);
+}
+
+.title h3{
+    text-align: center;
     font: var(--font-16-medium);
-    color: #919191;
-    justify-content: center;
+    color: var(--placeholder);
+    margin: .5rem 0 1rem 0;
 }
 
 .form {
     display: flex;
     flex-direction: column;
     align-items: center;
+    gap: 2rem;
 }
 
 .form__container {
@@ -38,7 +34,7 @@ main {
     display: flex;
     flex-direction: column;
     align-items: left;
-    padding: .5rem 1rem;
+    gap: 1rem;
 }
 
 .form__container option{
@@ -54,48 +50,44 @@ main {
     border: none;
     border-radius: 12px;
     padding: 0.5rem 1rem;
-    margin: 8px;
     cursor: pointer;
 }
 
 .form__container--fields {
     display: flex;
-    flex-direction: row;
-    gap: 16px;
-    margin: 16px;
+    justify-content: flex-start;
+    align-items: center;
+    width: 100%;
+    background-color: var(--input-background);
+    border-radius: 0.875rem;
+    padding: .5rem 1rem;
 }
 
 .form__container--fields img {
-    width: 25px;
-    display: flex;
-    position: absolute;
-    margin: 6px;
+    width: 24px;
 }
 
 .form__container--fields input, select {
     width: 100%;
-    height: 36px;
-    background-color: #E4E4E4;
     font: var(--font-16-medium);
     color: var(--verde-escuro-90);
-    text-align: left;
-    border-radius: 0.875rem;
+    background-color: transparent;
     border: none;
+    padding: 0 .5rem;
 }
 
 .form__container--fields select {
     cursor: pointer;
-    padding-left: 36px;
 }
 
 .form__input::placeholder {
     width: 100%;
     height: 36px;
-    background-color: #E4E4E4;
+    background-color: var(--input-background);
     font: var(--font-16-medium);
-    color: var(--verde-escuro-90);
+    color: var(--placeholder);
     text-align: left;
-    padding-left: 36px;
+    padding: .5rem 0;
     border-radius: 0.875rem;
     border: none;
 }
@@ -106,4 +98,25 @@ main {
 
 .form__container--fields input[type="date"]::-webkit-calendar-picker-indicator {
     opacity: 0;
+}
+
+@media (min-width: 992px) {
+    .title h2 {
+        font: var(--font-48-medium);
+    }
+
+    .title h3 {
+        font: var(--font-24-medium);
+    }
+
+    .form {
+        display: flex;
+        flex-direction: column;
+        align-items: center;
+        gap: 3rem;
+    }
+
+    .form__container {
+        max-width: 350px;
+    }
 }
