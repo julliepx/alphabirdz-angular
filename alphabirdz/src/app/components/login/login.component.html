@@ -2,20 +2,20 @@
     <div class="header__login">
         <h2>Faça o Login</h2>
         <div class="header__icons">
-            <img src="../../../assets/img/facebook-svgrepo-com (1) 1.svg" alt="">
-            <img src="../../../assets/img/Group (1).svg" alt="">
-            <img src="../../../assets/img/Group.svg" alt="">
+            <img src="../../../assets/img//google_phosphor_icon.svg" alt="">
+            <img src="../../../assets/img/linkedin_phosphor_icon.svg" alt="">
+            <img src="../../../assets/img/facebook_phosphor_icon.svg" alt="">
         </div>
         <p>ou use seu e-mail para logar</p>
     </div>
-    <div class="form-email">
-        <form class="form" [formGroup]="loginForm" (ngSubmit)="onSubmit()" #formDir="ngForm">
+    <div class="form">
+        <form class="form__container" [formGroup]="loginForm" (ngSubmit)="onSubmit()" #formDir="ngForm">
             <div class="form-group">
-                <img class="icon_login" src="../../../assets/img/envelope 1.svg" alt="">
+                <img class="icon_login" src="../../../assets/img/mail_phosphor_icons.svg" alt="">
                 <input placeholder="E-mail" type="email" formControlName="email"  id="email" name="email" class="form-control" required>
             </div>
             <div class="form-group">
-                <img class="icon_password" src="../../../assets/img/lock-key 1.svg" alt="">
+                <img class="icon_password" src="../../../assets/img/lock_phosphor_icon.svg" alt="">
                 <input placeholder="Senha" type="password" formControlName="password" id="password" name="password" class="form-control" required>
             </div>
             <div class="form-button">
