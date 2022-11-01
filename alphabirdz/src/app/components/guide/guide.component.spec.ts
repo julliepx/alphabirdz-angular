@@ -39,18 +39,4 @@ describe('GuideComponent', () => {
   it('should create', () => {
     expect(component).toBeTruthy();
   });
-
-  it('Server response is equal 5 and response[0] == "garça-branca-grande"', () => {
-    birdService.getAllBirds().subscribe(response => {
-      expect(response.length).toEqual(5);
-      expect(response[0].portugueseName).toEqual('garça-branca-grande');
-    });
-
-    const req = httpController.expectOne('http://localhost:8080/birds/all');
-    expect(req.request.method).toBe('GET');
-  });
-
-  afterEach(() => {
-    httpController.verify();
-  });
 });
