@@ -1,12 +1,11 @@
-<section class="container">
+<section class="container" (mousemove)="renderFilterColor(birds)">
     <div class="filter">
         <select (change)="selectOption($any($event.target).value, $any($event.target).id)"
                 (change)="sendEmitter()"
-                (mousemove)="renderFilterColor(birds)"
                 id="dominantColor"
                 class="container__filter">
             <option value="">color</option>
-            <option value="{{ color }}" *ngFor="let color of allColors"> {{ color }}</option>
+            <option value="{{ color }}" *ngFor="let color of allColors">{{ color }}</option>
         </select>
     </div>
 
