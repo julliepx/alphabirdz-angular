@@ -13,6 +13,7 @@ git clone https://gitlab.com/alphabirdz/alphabirdz-angular.git
 - Entre no diretório.
 ```
 cd alpabirdz-angular
+cd alpabirdz
 ```
 - Instale as dependencias necessarias.
 ```
@@ -33,10 +34,10 @@ O propósito é q seja possivel cadastrar avistamentos de aves, indicando qual a
 
 ## Interface / Protótipo
 #### Landing page
-![Database Tables](./assets/img/landing_phone_576.png)
+![Database Tables](./assets/img/mobile.svg)
 
 #### Guide page
-![Database Tables](./assets/img/guide_phone_576.png)
+![Database Tables](./assets/img/desktop.svg)
 
 #
 
