@@ -1,29 +1,18 @@
-<main class="container--mobile" *ngIf="mobile">
-    <section class="container__section">
-        <p>Fotografe aves em seus habitats naturais e poste os avistamentos para toda a comunidade ver</p>
+<main class="container">
+    <section class="containersection">
+        <p>fotografe aves em seus habitats naturais e post os avistamentos para toda a comunidade ver</p>
         <img src="../../../assets/img/photographer.svg" alt="Desenho minimalista de uma pessoa fotografando virada para a esquerda com uma camera com lente grande">
     </section>
-    <section class="container__section">
+    <section class="containersection">
         <img src="../../../assets/img/location.svg" alt="Desenho minimalista de uma pessoa sentada em cima de um checkpoint do google maps">
-        <p>Marque em suas postagens a sua localização no momento das fotos</p>
+        <p>marque em suas postagens a sua localização no momento das fotos</p>
     </section>
-    <section class="container__section--column">
-        <p>Além de aves incríveis veja paisagens incríveis</p>
+    <section class="containersection--column">
+        <p>além de aves incríveis veja paisagens incríveis</p>
         <img src="../../../assets/img/explore.svg" alt="Desenho minimalista de uma pessoa com fones caminhando em um parque com o sol se pondo atrás de montanhas">
     </section>
 </main>
-
-<main class="container--desktop" *ngIf="!mobile">
-    <section class="container__section">
-        <p>Fotografe aves em seus habitats naturais e post os avistamentos para toda a comunidade ver</p>
-        <img src="../../../assets/img/photographer.svg" alt="Desenho minimalista de uma pessoa fotografando virada para a esquerda com uma camera com lente grande">
-    </section>
-    <section class="container__section">
-        <img src="../../../assets/img/location.svg" alt="Desenho minimalista de uma pessoa sentada em cima de um checkpoint do google maps">
-        <p>Marque em suas postagens a sua localização no momento das fotos</p>
-    </section>
-    <section class="container__section--column">
-        <p>Além de aves incríveis veja paisagens incríveis</p>
-        <img src="../../../assets/img/explore.svg" alt="Desenho minimalista de uma pessoa com fones caminhando em um parque com o sol se pondo atrás de montanhas">
-    </section>
-</main>
+<section class="containersection--cadastrar">
+    <img src="../../../assets/img/register.svg" alt="Ícone de pássaro do phosphor icon"> 
+    <a [routerLink]="['/register']">comece a registrar seus momentos agora</a>
+</section>
