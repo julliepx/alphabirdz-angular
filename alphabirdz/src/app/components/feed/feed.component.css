@@ -47,12 +47,11 @@ main {
     display: flex;
     justify-content: flex-end;
     align-items: center;
-    height: 400px;
 }
 
 .card__container--img img {
     width: 96%;
-    height: 100%;
+    height: 270px;
     border-radius: 16px 0 0 16px;
 }
 
@@ -143,6 +142,10 @@ p {
 
     .card__container--header {
         font: var(--font-32-medium);
+    }
+
+    .card__container--img img {
+        height: 400px;
     }
 
     .circle {

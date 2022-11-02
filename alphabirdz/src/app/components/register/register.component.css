@@ -95,6 +95,10 @@
     border: none;
 }
 
+.form-group input:focus::placeholder {
+    opacity: 0;
+}
+
 .form-group img {
     width: 24px;
 }
