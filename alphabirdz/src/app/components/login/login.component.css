@@ -1,0 +1,135 @@
+.login__page {
+    display: flex;
+    flex-direction: column;
+    height: 100vh;
+}
+
+.header__login {
+    display: flex;
+    flex-direction: column;
+    gap: 1rem;
+    margin: 1rem;
+}
+
+.header__login h2 {
+    text-align: center;
+    font: var(--font-32-medium);
+    color: var(--verde-escuro-90);
+}
+
+.header__icons {
+    display: flex;
+    justify-content: center;
+    gap: 1rem;
+}
+
+.header__icons img {
+    width: 48px;
+}
+
+.header__login p, .login__footer p {
+    text-align: center;
+    font: var(--font-16-medium);
+    color: var(--placeholder);
+}
+
+.login__footer {
+    display: flex;
+    gap: .5rem;
+}
+
+.login__footer a {
+    text-align: center;
+    font: var(--font-16-medium);
+    color: var(--verde-escuro-90);
+}
+
+.login__footer a:hover {
+    color: var(--verde-claro-90);
+}
+
+.form {
+    display: flex;
+    flex-direction: column;
+    align-items: center;
+    gap: 1rem;
+}
+
+.form__container {
+    width: 100%;
+    border-radius: 0.875rem;
+    display: flex;
+    flex-direction: column;
+    gap: 1rem;
+    padding: 0 1rem;
+}
+
+.form-group {
+    display: flex;
+    justify-content: flex-start;
+    align-items: center;
+    width: 100%;
+    background-color: var(--input-background);
+    border-radius: 0.875rem;
+    padding: .5rem 1rem;
+}
+
+.form-group input {
+    width: 100%;
+    font: var(--font-16-medium);
+    color: var(--verde-escuro-90);
+    background-color: transparent;
+    border: none;
+    padding: 0 .5rem;
+}
+
+.form-group input::placeholder{
+    width: 100%;
+    height: 36px;
+    background-color: var(--input-background);
+    font: var(--font-16-medium);
+    color: var(--placeholder);
+    text-align: left;
+    padding: .5rem 0;
+    border-radius: 0.875rem;
+    border: none;
+}
+
+.form-group input:focus::placeholder {
+    opacity: 0;
+}
+
+.form-group img {
+    width: 24px;
+}
+
+.form-button {
+    display: flex;
+    justify-content: center;
+}
+
+.submit__button {
+    background-color: var(--verde-escuro-90);
+    color: var(--verde-claro-10);
+    font: var(--font-16-medium);
+    border: none;
+    border-radius: 12px;
+    padding: 0.5rem 1rem;
+    cursor: pointer;
+    margin-top: 1.5rem;
+}
+
+@media (min-width: 992px) {
+    .header__login h2 {
+        font: var(--font-48-medium);
+    }
+
+    .form {
+        gap: 3rem;
+    }
+
+    .form__container {
+        max-width: 350px;
+    }
+}
+

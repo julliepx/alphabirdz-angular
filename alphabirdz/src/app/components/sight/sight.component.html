@@ -1,0 +1,37 @@
+<main>
+    <div class="title">
+        <h2>Cadastrar Avistamento</h2>
+        <h3>Escolha as informações do que você avistou.</h3>
+    </div>
+    <form class="form" (ngSubmit)="onSubmit()" [formGroup]="sightForm">
+        <div class="form__container">
+            <div class="form__container--fields">
+                <img src="../../../assets/img/image_phosphor_icon_input.svg" alt="Image Icon">
+                <input id="inputImage" class="form__input" type="text" placeholder="URL da Imagem" formControlName="image">
+            </div>
+            <div class="form__container--fields">
+                <img src="../../../assets/img/map_phosphor_icon_input.svg" alt="Map Icon">
+                <input id="inputLocation" class="form__input" type="text" placeholder="Local do Avistamento" formControlName="location">
+            </div>
+            <div class="form__container--fields">
+                <img src="../../../assets/img/calendar_phosphor_icon_input.svg" alt="Date Icon">
+                <input id="inputDate" class="form__input" type="text" placeholder="Data do Avistamento" onfocus="(this.type='date')" formControlName="date">
+            </div>
+            <div class="form__container--fields">
+                <img src="../../../assets/img/user_phosphor_icon_input.svg" alt="User Icon">
+                <select id="inputUser" class="form__select" formGroupName="user">
+                    <option selected> Usuário </option>
+                    <option [ngValue]="users[5]" [selected]=""> Administrador </option>
+                </select>
+            </div>
+            <div class="form__container--fields">
+                <img src="../../../assets/img/bird_phosphor_icon_input.svg" alt="Bird Icon">
+                <select id="inputBird" class="form__select" formGroupName="bird">
+                    <option selected> Pássaro </option>
+                    <option *ngFor="let bird of birds" [ngValue]="bird">{{ bird.portugueseName | titlecase }}</option>
+                </select>
+            </div>
+        </div>
+        <button id="submitButton" class="submit__button" type="submit">Cadastrar</button>
+    </form>
+</main>

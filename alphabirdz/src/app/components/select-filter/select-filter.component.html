@@ -1,0 +1,42 @@
+<section class="container" (mousemove)="renderFilterColor(birds)">
+    <div class="filter">
+        <select (change)="selectOption($any($event.target).value, $any($event.target).id)"
+                (change)="sendEmitter()"
+                id="dominantColor"
+                class="container__filter">
+            <option value="">color</option>
+            <option value="{{ color }}" *ngFor="let color of allColors">{{ color }}</option>
+        </select>
+    </div>
+
+    <div class="filter">
+        <select (change)="selectOption($any($event.target).value, $any($event.target).id)"
+                (change)="sendEmitter()"
+                id="gender"
+                class="container__filter">
+            <option value="gender">Gênero</option>
+            <option value="male">Macho</option>
+            <option value="female">Fêmea</option>
+            <option value="">Jovem</option>
+        </select>
+    </div>
+
+    <div class="filter">
+        <select (change)="selectOption($any($event.target).value, $any($event.target).id)"
+                (change)="sendEmitter()"
+                id="birdSize"
+                class="container__filter">
+            <option value="0,100">Tamanho</option>
+            <option value="0,10">0cm a 10cm</option>
+            <option value="11,20">11cm a 20cm</option>
+            <option value="21,30">21cm a 30cm</option>
+            <option value="31,40">31cm a 40cm</option>
+            <option value="41,50">41cm a 50cm</option>
+            <option value="51,60">51cm a 60cm</option>
+            <option value="61,70">61cm a 70cm</option>
+            <option value="71,80">71cm a 80cm</option>
+            <option value="81,90">81cm a 90cm</option>
+            <option value="91,100">91cm a 100cm</option>
+        </select>
+    </div>
+</section>

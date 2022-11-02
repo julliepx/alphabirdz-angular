@@ -1,19 +1,47 @@
 <main>
-    <div class="card" *ngFor="let bird of birds">
-        <div class="card__container--header">
-            <div class="circle"></div>
-            <p> {{ bird.portugueseName | titlecase }} </p>
-        </div>
-        <div class="card__container--img">
-            <img src="../../../assets/img/bird_phosphor_icon.svg" alt="Avatar" class="bird_img">
-        </div>
-        <div class="card_container--footer">
-            <div class="habitat">
-                <h4>Habitat</h4>
-                <p *ngIf="bird.habitat != null"> {{ bird.habitat | titlecase }} </p>
-                <p *ngIf="bird.habitat == ''"> Não informado </p>
+    <ng-container *ngFor="let bird of filterCards(birds, filter)">
+        <div class="card">
+            <div class="card__container--header">
+                <div class="circle" [style.backgroundColor]="bird.dominantColor"></div>
+                <h2> {{ bird.portugueseName | titlecase }} </h2>
             </div>
-            <img src="../../../assets/img/gender_frame.svg" alt="" class="gender">
+            <div class="card__container--img">
+                <img src="{{ bird.image }}" alt="Avatar" class="bird_img">
+            </div>
+            <div class="card_container--footer">
+                <div class="habitat">
+                    <h3>Habitat</h3>
+                    <p *ngIf="bird.habitat != null"> {{ bird.habitat }} </p>
+                    <p *ngIf="bird.habitat == ''"> Não informado </p>
+                </div>
+    
+                <img *ngIf="bird.gender == 'male'" src="../../../assets/img/gender_frame.svg" alt="" class="gender">
+                <img *ngIf="bird.gender == 'female'" src="../../../assets/img/gender-female.svg" alt="" class="gender">
+                <img *ngIf="bird.gender == ''" src="../../../assets/img/gender-young.svg" alt="" class="gender">
+            </div>
+    
+            <div class="hide_details card_container--details" id="{{bird.id}}">
+                <div>
+                    <h3 id="latin__name"> Nome em latim </h3>
+                    <p> {{bird.latinName}} </p>
+                </div>
+    
+                <div>
+                    <h3 id="english__name"> Nome em Inglês</h3>
+                    <p> {{bird.englishName }} </p>
+                </div>
+                <div>
+                    <h3 id="family"> Família </h3>
+                    <p> {{bird.family}} </p>
+                </div>
+    
+                <div>
+                    <h3 id="bird__size"> Tamanho </h3>
+                    <p> {{bird.birdSize}}cm </p>
+                </div>
+            </div>
+            <button class="details__button" id="button{{bird.id}}" (click)="showDetails(bird.id)" > Mais informações </button>
+            <script src="./card.component.ts"></script>
         </div>
-    </div>
+    </ng-container>
 </main>

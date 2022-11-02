@@ -1,0 +1,31 @@
+<main>
+    <div class="card" *ngFor="let post of posts">
+        <div class="card__container--header">
+            <img src="../../../assets/img/user_phosphor_icon_green.svg" alt="foto de perfil do usuário">
+            <h2> {{post.user.username}} </h2>
+        </div>
+        <div class="card__container--img">
+            <img src="{{ post.image }}" alt="Avatar" class="post_img">
+        </div>
+        <div class="card__container--footer">
+                <div>
+                    <h4> {{post.bird.portugueseName}} </h4>
+                    <p> {{post.bird.englishName}} </p>
+                </div>
+                <div class="footer__details">
+                    <div>
+                        <h4> Local </h4>
+                        <p> {{post.location}} </p>
+                    </div>
+                    <div>         
+                        <h4> Data </h4>
+                        <p> {{post.date}} </p>
+                    </div>
+                </div>
+        </div>
+    </div>
+    <a id="newSightButton" [routerLink]="['/feed/add']" class="addview__button">
+        <img src="../../../assets/img/plus-circle.svg" alt="">
+        <p> Novo Avistamento </p>
+    </a>
+</main>

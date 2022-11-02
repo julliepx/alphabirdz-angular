@@ -1,11 +1,54 @@
-.menu__list {
-    min-width: 220px;
+.user__list {
+    min-width: 150px;
     width: 80%;
     max-width: 500px;
-    min-height: 500px;
+    min-height: 400px;
     position: absolute;
     right: 0;
     display: flex;
     justify-content: center;
     background-color: var(--verde-claro-10);
+    z-index: 1;
+    align-items: flex-start;
+}
+
+.menu {
+    min-width: 150px;
+    width: 80%;
+    max-width: 500px;
+    min-height: 200px;
+    display: flex;
+    justify-content: center;
+    position: absolute;
+    left: 0;
+    background-color: var(--verde-claro-10);
+}
+
+.menu ul {
+    display: flex;
+    align-items: flex-start;
+    flex-direction: column;
+    list-style: none;
+}
+
+.menu li {
+    display: flex;
+    align-items: center;
+    padding: .5rem 1rem;
+}
+
+.menu a {
+    text-decoration: none;
+    font: var(--font-16-medium);
+    color: var(--verde-escuro-90);
+}
+
+.menu a:hover {
+    transform: scale(1.03);
+}
+
+.menu img {
+    width: 24px;
+    height: 24px;
+    margin: 8px;
 }
