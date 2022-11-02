@@ -1,4 +1,16 @@
-<main class="menu__list menu">
-    <a [routerLink]= "['/login']" >Login here </a>
-    <a [routerLink]= "['/register']" >Register here </a>
+<main class="user__list">
+    <nav class="menu">
+        <ul>
+            <li>
+                <img src="../../../assets/img/register.svg" alt="Ícone de pássaro do phosphor icon"> 
+                <a [routerLink]="['/register']" (click)="openUser()" >Cadastre-se</a>
+            </li>
+            <li>
+                <img src="../../../assets/img/login.svg" alt="Ícone de dois balões de conversa do phosphor icon se sobrepondo">
+                <a [routerLink]="['/login']" (click)="openUser()" >Login</a>
+            </li>
+        </ul>
+    </nav>
 </main>
+
+

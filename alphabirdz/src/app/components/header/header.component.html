@@ -17,5 +17,5 @@
 </header>
 
 <app-menu-list *ngIf="menuOpen && mobile"></app-menu-list>
-<app-user-list *ngIf="userOpen"></app-user-list>
+<app-user-list *ngIf="userOpen" (isOpen)="openUser()" ></app-user-list>
 

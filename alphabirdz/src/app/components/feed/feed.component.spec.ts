@@ -6,7 +6,6 @@ import { BirdService } from 'src/app/services/bird.service';
 import { PostService } from 'src/app/services/post.service';
 import { UserService } from 'src/app/services/user.service';
 import { SightComponent } from '../sight/sight.component';
-
 import { FeedComponent } from './feed.component';
 
 fdescribe('FeedComponent', () => {
