@@ -1,6 +1,5 @@
 import { Component, OnInit } from '@angular/core';
 import { FormGroup, FormControl, Validators } from '@angular/forms';
-import { StatusCodes } from 'http-status-codes';
 import { User } from 'src/app/interfaces/user';
 import { UserService } from 'src/app/services/user.service';
 
@@ -27,16 +26,8 @@ export class LoginComponent implements OnInit {
     })
   }
 
-
-  public login(onSubmit) {
-    if (onSubmit == StatusCodes.OK){
-    } else if (onSubmit == StatusCodes.BAD_REQUEST){
-      console.log(this.errorMessage)
-    }
-  }
-
   public onSubmit(): any {
-    let response = this.userService.login(this.loginForm.value).subscribe(data => {
+    this.userService.login(this.loginForm.value).subscribe(data => {
       this.user = data;
       this.isLogged = true;
     },
